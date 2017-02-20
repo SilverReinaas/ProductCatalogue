@@ -28,5 +28,17 @@ namespace Tests
         {
             Assert.IsNotNull(k);
         }
+
+        [TestMethod]
+        public void ProductTypeTest()
+        {
+            Assert.IsNotNull(k.ProductTypes);
+        }
+
+        [TestMethod]
+        public void ProductCategoryTest()
+        {
+            Assert.IsNotNull(k.ProductCategories);
+        }
     }
 }
