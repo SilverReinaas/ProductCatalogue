@@ -49,6 +49,7 @@
       <Property Name="ProductTypes" />
       <Property Name="ProductCategories" />
     </ShowAsCollectionAssociation>
+    <Lollipop Position="0.2" />
   </Class>
   <Class Name="Logic.CatalogueCategory">
     <Position X="1" Y="0.5" Width="1.5" />
