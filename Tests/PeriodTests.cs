@@ -26,19 +26,5 @@ namespace Tests
         {
             Assert.IsNotNull(myPeriod);
         }
-
-        [TestMethod]
-        public void DateTimeFromIsNotNullTest()
-        {
-            DateTime from = myPeriod.From;
-            Assert.IsNotNull(from);
-        }
-
-        [TestMethod]
-        public void DateTimeToIsNotNullTest()
-        {
-            DateTime to = myPeriod.To;
-            Assert.IsNotNull(to);
-        }
     }
 }
