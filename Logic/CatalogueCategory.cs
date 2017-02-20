@@ -6,11 +6,10 @@ using System.Threading.Tasks;
 
 namespace Logic
 {
-    public class CatalogueEntry
+    public class CatalogueCategory
     {
-        public string Id { get; set; }
+        public string ID { get; set; }
         public string Name { get; set; }
         public Period Valid { get; set; }
-        public List<ProductType> ProductTypes { get; set; }
     }
 }
