@@ -22,7 +22,7 @@ namespace Tests
         }
 
         [TestMethod]
-        public void ConstructorTest()
+        public void PeriodConstructorTest()
         {
             Assert.IsNotNull(myPeriod);
         }
