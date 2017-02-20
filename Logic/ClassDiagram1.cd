@@ -15,7 +15,7 @@
     </TypeIdentifier>
   </Class>
   <Class Name="Logic.ProductCatalogue">
-    <Position X="4" Y="0.5" Width="1.5" />
+    <Position X="4.25" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>QgACAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAABAAAAAA=</HashCode>
       <FileName>ProductCatalogue.cs</FileName>
@@ -26,7 +26,7 @@
     </ShowAsCollectionAssociation>
   </Class>
   <Class Name="Logic.Period">
-    <Position X="8" Y="0.5" Width="1.5" />
+    <Position X="7.25" Y="0.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AgAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Period.cs</FileName>
