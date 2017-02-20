@@ -16,7 +16,7 @@ namespace Tests
         [TestInitialize]
         public void InitializeTest()
         {
-            var k = new CatalogueEntry();
+            k = new CatalogueEntry();
         }
         [TestCleanup]
         public void CleanUpTest()
@@ -26,7 +26,7 @@ namespace Tests
         [TestMethod]
         public void ConstructorTest()
         {
-            Assert.AreNotEqual(k, null);
+            Assert.IsNotNull(k);
         }
     }
 }
