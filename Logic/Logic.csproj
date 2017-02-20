@@ -43,6 +43,7 @@
     <Compile Include="CatalogueCategory.cs" />
     <Compile Include="CatalogueEntry.cs" />
     <Compile Include="INamed.cs" />
+    <Compile Include="ITimeLimited.cs" />
     <Compile Include="Period.cs" />
     <Compile Include="ProductCatalogue.cs" />
     <Compile Include="ProductCategory.cs" />
