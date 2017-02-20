@@ -8,7 +8,7 @@ namespace Logic
 {
     public class ProductType
     {
-        public string ID { get; set; }
+        public string Id { get; set; }
         public string Name { get; set; }
         public Period Valid { get; set; }
     }
