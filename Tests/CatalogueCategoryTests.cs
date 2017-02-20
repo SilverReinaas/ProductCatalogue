@@ -7,10 +7,18 @@ namespace Tests
     [TestClass]
     public class CatalogueCategoryTests
     {
+        public CatalogueCategory MyCatalogueCategory;
+
+        [TestInitialize]
+        public void Init()
+        {
+            MyCatalogueCategory = new CatalogueCategory();
+        }
+
         [TestMethod]
         public void ConstructorTest()
         {
-            var myCatalogueCategory = new CatalogueCategory();
+            Assert.IsNotNull(MyCatalogueCategory);
         }
     }
 }
