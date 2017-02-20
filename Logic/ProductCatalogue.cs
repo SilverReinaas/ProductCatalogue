@@ -10,7 +10,8 @@ namespace Logic
     {
         public string Id { get; set; }
         public string Name { get; set; }
-        public List<CatalogueEntry> CatalogueEntries;
-        public List<CatalogueCategory> CatalogueCategories;
+        public Period Valid { get; set; }
+        public List<CatalogueEntry> CatalogueEntries { get; set; }
+        public List<CatalogueCategory> CatalogueCategories { get; set; }
     }
 }
