@@ -8,5 +8,9 @@ namespace Logic
 {
     public class CatalogueEntry
     {
+        public string Id { get; set; }
+        public string Name { get; set; }
+        public Period Valid { get; set; }
+        public List<ProductType> ProductTypes { get; set; }
     }
 }
