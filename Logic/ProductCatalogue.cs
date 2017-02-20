@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Logic
 {
-    public class ProductCatalogue
+    public class ProductCatalogue : INamed, ITimeLimited
     {
         public string Id { get; set; }
         public string Name { get; set; }

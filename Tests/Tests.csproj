@@ -51,6 +51,7 @@
   </Choose>
   <ItemGroup>
     <Compile Include="CatalogueCategoryTests.cs" />
+    <Compile Include="ProductCatalogueTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Choose>
