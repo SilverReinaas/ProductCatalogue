@@ -1,30 +1,34 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using Logic;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Tests
 {
     [TestClass]
-    public class PeriodTests
+    public class ProductCategoryTests
     {
-        private Period myPeriod;
+        private ProductCategory myProductCategory;
 
         [TestInitialize]
         public void Init()
         {
-            myPeriod = new Period();
+            myProductCategory = new ProductCategory();
         }
 
         [TestCleanup]
         public void TestCleanUp()
         {
-            myPeriod = null;
+            myProductCategory = null;
         }
 
         [TestMethod]
         public void PeriodConstructorTest()
         {
-            Assert.IsNotNull(myPeriod);
+            Assert.IsNotNull(myProductCategory);
         }
     }
 }
