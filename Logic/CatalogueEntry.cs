@@ -12,5 +12,6 @@ namespace Logic
         public string Name { get; set; }
         public Period Valid { get; set; }
         public List<ProductType> ProductTypes { get; set; }
+        public List<ProductCategory> ProductCategories { get; set; }
     }
 }

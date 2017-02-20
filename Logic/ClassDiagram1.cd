@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Logic.ProductType">
+    <Position X="7" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAgAAAAAAAAAQAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>ProductType.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Logic.ProductCategory">
+    <Position X="1.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>ProductCategory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Logic.ProductCatalogue">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QgACAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>ProductCatalogue.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="CatalogueEntries" />
+      <Property Name="CatalogueCategories" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Logic.Period">
+    <Position X="8" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Period.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Logic.CatalogueEntry">
+    <Position X="4.25" Y="3" Width="1.5" />
+    <AssociationLine Name="ProductCategories" Type="Logic.ProductCategory" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="4.25" Y="3.744" />
+        <Point X="2.438" Y="3.744" />
+        <Point X="2.438" Y="4.75" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAACAAAQAAAAAAAAABAAAAQAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>CatalogueEntry.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="ProductTypes" />
+      <Property Name="ProductCategories" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Logic.CatalogueCategory">
+    <Position X="1" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAgAAAAAAAAAQAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>CatalogueCategory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
