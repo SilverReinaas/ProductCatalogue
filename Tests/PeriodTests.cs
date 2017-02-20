@@ -1,16 +1,19 @@
 ﻿using System;
-using Logic;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Tests
 {
     [TestClass]
-    public class CatalogueCategoryTests
+    public class PeriodTests
     {
         [TestMethod]
         public void ConstructorTest()
         {
-            var myCatalogueCategory = new CatalogueCategory();
+
         }
     }
 }
