@@ -10,6 +10,6 @@ namespace Logic
     {
         public string ID { get; set; }
         public string Name { get; set; }
-        public Period Valid { get; set; } 
+        public Period Valid { get; set; }
     }
 }
