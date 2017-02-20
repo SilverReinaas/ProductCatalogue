@@ -27,7 +27,19 @@ namespace Tests
         [TestMethod]
         public void ConstructorTest()
         {
-            Assert.IsNotNull(m, null);
+            Assert.IsNotNull(m);
+        }
+
+        [TestMethod]
+        public void CatalogueEntriesTest()
+        {
+            Assert.IsNotNull(m.CatalogueEntries);
+        }
+
+        [TestMethod]
+        public void CatalogueCategoriesTest()
+        {
+            Assert.IsNotNull(m.CatalogueCategories);
         }
     }
 }
