@@ -51,7 +51,7 @@
   </Choose>
   <ItemGroup>
     <Compile Include="CatalogueCategoryTests.cs" />
-    <Compile Include="ProductTypeTests.cs" />
+    <Compile Include="PeriodTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
