@@ -1,33 +1,31 @@
-﻿using System;
+﻿using Logic;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Logic;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Tests
 {
     [TestClass]
-    public class ProductCatalogueTests
+    public class ProductTypeTests
     {
-        private ProductCatalogue m;
+        public ProductType p;
         [TestInitialize]
         public void InitializeTest()
         {
-            m = new ProductCatalogue();
+            var p = new ProductType();
         }
-
         [TestCleanup]
-        public void TestCleanUp()
+        public void CleanupTest()
         {
-            m = null;
+            p = null;
         }
-
         [TestMethod]
         public void ConstructorTest()
         {
-            Assert.IsNotNull(m, null);
+            Assert.IsNotNull(p);
         }
     }
 }

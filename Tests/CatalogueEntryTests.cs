@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
 using Logic;
@@ -9,25 +10,23 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace Tests
 {
     [TestClass]
-    public class ProductCatalogueTests
+    public class CatalogueEntryTests
     {
-        private ProductCatalogue m;
+        public CatalogueEntry k;
         [TestInitialize]
         public void InitializeTest()
         {
-            m = new ProductCatalogue();
+            k = new CatalogueEntry();
         }
-
         [TestCleanup]
-        public void TestCleanUp()
+        public void CleanUpTest()
         {
-            m = null;
+            k = null;
         }
-
         [TestMethod]
         public void ConstructorTest()
         {
-            Assert.IsNotNull(m, null);
+            Assert.IsNotNull(k);
         }
     }
 }
