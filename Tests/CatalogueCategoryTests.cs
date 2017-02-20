@@ -1,4 +1,5 @@
 ﻿using System;
+using Logic;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Tests
@@ -9,6 +10,7 @@ namespace Tests
         [TestMethod]
         public void ConstructorTest()
         {
+            var myCatalogueCategory = new CatalogueCategory();
         }
     }
 }

@@ -3,9 +3,10 @@
   <Class Name="Logic.ProductType">
     <Position X="7" Y="4.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAgAAAAAAAAAQAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAABAAAAAA=</HashCode>
       <FileName>ProductType.cs</FileName>
     </TypeIdentifier>
+    <Lollipop Position="0.2" />
   </Class>
   <Class Name="Logic.ProductCategory">
     <Position X="1.75" Y="4.75" Width="1.5" />
@@ -13,6 +14,7 @@
       <HashCode>AAACAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAABAAAAAA=</HashCode>
       <FileName>ProductCategory.cs</FileName>
     </TypeIdentifier>
+    <Lollipop Position="0.2" />
   </Class>
   <Class Name="Logic.ProductCatalogue">
     <Position X="4.25" Y="0.5" Width="1.5" />
@@ -24,6 +26,7 @@
       <Property Name="CatalogueEntries" />
       <Property Name="CatalogueCategories" />
     </ShowAsCollectionAssociation>
+    <Lollipop Position="0.2" />
   </Class>
   <Class Name="Logic.Period">
     <Position X="7.25" Y="0.75" Width="1.5" />
@@ -54,9 +57,10 @@
   <Class Name="Logic.CatalogueCategory">
     <Position X="1" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAgAAAAAAAAAQAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAABAAAAAA=</HashCode>
       <FileName>CatalogueCategory.cs</FileName>
     </TypeIdentifier>
+    <Lollipop Position="0.2" />
   </Class>
   <Font Name="Segoe UI" Size="9" />
 </ClassDiagram>
