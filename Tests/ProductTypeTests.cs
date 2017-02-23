@@ -15,7 +15,7 @@ namespace Tests
         [TestInitialize]
         public void InitializeTest()
         {
-            var p = new ProductType();
+            p = new ProductType();
         }
         [TestCleanup]
         public void CleanupTest()
