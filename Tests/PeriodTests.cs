@@ -1,4 +1,5 @@
-﻿using Logic;
+﻿using System;
+using Logic;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Tests
@@ -24,6 +25,18 @@ namespace Tests
         public void PeriodConstructorTest()
         {
             Assert.IsNotNull(myPeriod);
+        }
+
+        [TestMethod]
+        public void FromTest()
+        {
+            Assert.AreEqual(typeof(DateTime), myPeriod.From.GetType());
+        }
+
+        [TestMethod]
+        public void ToTest()
+        {
+            Assert.AreEqual(typeof(DateTime), myPeriod.To.GetType());
         }
     }
 }
