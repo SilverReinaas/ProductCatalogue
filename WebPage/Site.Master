@@ -16,7 +16,7 @@
             <li>
                 <a href="#">Product Catalogues</a>
                 <ul class="dropdown">
-                    <li><a href="#">Catalogue 1</a></li>
+                    <li><a href="#">Catalogue 1</a> </li>
                     <li><a href="#">Catalogue 2</a></li>
                     <li><a href="#">Catalogue 3</a></li>
                 </ul>
