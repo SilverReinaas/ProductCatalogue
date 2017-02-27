@@ -4,12 +4,21 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
+    <link rel="stylesheet" type="text/css" href="Style.css" />
     <title></title>
     <asp:ContentPlaceHolder ID="head" runat="server">
+
     </asp:ContentPlaceHolder>
 </head>
 <body>
     <form id="form1" runat="server">
+        <ul>
+  <li><a href="#home">Home</a></li>
+  <li><a href="#news">News</a></li>
+  <li><a href="#contact">Contact</a></li>
+  <li><a href="#about">About</a></li>
+</ul>
+
     <div>
         <asp:ContentPlaceHolder ID="MainContent" runat="server">
         
