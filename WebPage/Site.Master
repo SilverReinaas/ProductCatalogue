@@ -15,11 +15,16 @@
             <li><a href="#">Home</a></li>
             <li>
                 <a href="#">Product Catalogues</a>
-                <ul class="dropdown">
-                    <li><a href="#">Catalogue 1</a> </li>
-                    <li><a href="#">Catalogue 2</a></li>
-                    <li><a href="#">Catalogue 3</a></li>
-                </ul>
+                <asp:ListView runat="server" ID="DropDownItemsListView">
+                    <LayoutTemplate>
+                        <ul class="dropdown">
+                            <li runat="server" id="itemPlaceholder"></li>
+                        </ul>
+                    </LayoutTemplate>
+                    <ItemTemplate>
+                        <li><a href="#"><%# Eval("Name") %></a></li>
+                    </ItemTemplate>
+                </asp:ListView>
             </li>
             <li><a href="#">About</a></li>
             <li><a href="#">Contact</a></li>
