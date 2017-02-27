@@ -15,9 +15,9 @@ namespace WebPage
         {
             productCatalogues = new List<ProductCatalogue>()
             {
-                new ProductCatalogue() {Name = "Cars", Id = "123klasd"},
+                new ProductCatalogue() {Name = "Vehicles", Id = "123klasd"},
                 new ProductCatalogue() {Name = "Books", Id = "12n1fn"},
-                new ProductCatalogue() {Name = "Vehicles", Id = "lkjads12"}
+                new ProductCatalogue() {Name = "Clothing", Id = "lkjads12"}
             };
             productCatalogues = productCatalogues.OrderBy(x => x.Name).ToList();
             DropDownItemsListView.DataSource = productCatalogues;
