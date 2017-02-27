@@ -12,19 +12,18 @@
 <body>
     <form id="form1" runat="server">
         <ul>
+            <li><a href="#">Home</a></li>
             <li>
-                <a href="#">Product Catalgoues &#9662;</a>
+                <a href="#">Product Catalogues</a>
                 <ul class="dropdown">
                     <li><a href="#">Catalogue 1</a></li>
                     <li><a href="#">Catalogue 2</a></li>
                     <li><a href="#">Catalogue 3</a></li>
                 </ul>
             </li>
-            <li><a href="#">Home</a></li>
             <li><a href="#">About</a></li>
             <li><a href="#">Contact</a></li>
         </ul>
-
         <div>
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
             </asp:ContentPlaceHolder>
