@@ -23,5 +23,7 @@ namespace Logic
             get { return productCategories ?? new List<ProductCategory>(); }
             set { productCategories = value; }
         }
+        public string ImageUrl { get; set; }
+        public double Price { get; set; }
     }
 }

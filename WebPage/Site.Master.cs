@@ -13,12 +13,7 @@ namespace WebPage
         private List<ProductCatalogue> productCatalogues;
         protected void Page_Load(object sender, EventArgs e)
         {
-            productCatalogues = new List<ProductCatalogue>()
-            {
-                new ProductCatalogue() {Name = "Vehicles", Id = "123klasd"},
-                new ProductCatalogue() {Name = "Books", Id = "12n1fn"},
-                new ProductCatalogue() {Name = "Clothing", Id = "lkjads12"}
-            };
+            productCatalogues = ProductCatalogue.GetCatalogues();
             productCatalogues = productCatalogues.OrderBy(x => x.Name).ToList();
             DropDownItemsListView.DataSource = productCatalogues;
             DropDownItemsListView.DataBind();
@@ -27,8 +22,8 @@ namespace WebPage
         protected void DropDownItemsListView_OnItemCommand(object sender, ListViewCommandEventArgs e)
         {
             var selectedCatalogue = productCatalogues[e.Item.DataItemIndex];
-            Session["ProductCatalogue"] = selectedCatalogue;
-            Response.Redirect("ProductCataloguePage.aspx");
+            //Session["ProductCatalogue"] = selectedCatalogue;
+            Response.Redirect($"ProductCataloguePage.aspx?Id={selectedCatalogue.Id}");
         }
     }
 }
