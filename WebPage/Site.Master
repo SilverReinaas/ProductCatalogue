@@ -15,14 +15,14 @@
             <li><a href="#">Home</a></li>
             <li>
                 <a href="#">Product Catalogues</a>
-                <asp:ListView runat="server" ID="DropDownItemsListView">
+                <asp:ListView runat="server" ID="DropDownItemsListView" OnItemCommand="DropDownItemsListView_OnItemCommand">
                     <LayoutTemplate>
                         <ul class="dropdown">
                             <li runat="server" id="itemPlaceholder"></li>
                         </ul>
                     </LayoutTemplate>
                     <ItemTemplate>
-                        <li><a href="#"><%# Eval("Name") %></a></li>
+                        <li><asp:LinkButton runat="server" ID="CatalogueButton"><%# Eval("Name") %></asp:LinkButton></li>
                     </ItemTemplate>
                 </asp:ListView>
             </li>

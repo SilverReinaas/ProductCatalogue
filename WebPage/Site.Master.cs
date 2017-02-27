@@ -10,16 +10,25 @@ namespace WebPage
 {
     public partial class Site : System.Web.UI.MasterPage
     {
+        private List<ProductCatalogue> productCatalogues;
         protected void Page_Load(object sender, EventArgs e)
         {
-            var productCatalogues = new List<ProductCatalogue>()
+            productCatalogues = new List<ProductCatalogue>()
             {
-                new ProductCatalogue() {Name = "Cars"},
-                new ProductCatalogue() {Name = "Books" },
-                new ProductCatalogue() {Name = "Computers"}
+                new ProductCatalogue() {Name = "Cars", Id = "123klasd"},
+                new ProductCatalogue() {Name = "Books", Id = "12n1fn"},
+                new ProductCatalogue() {Name = "Computers", Id = "lkjads12"}
             };
-            DropDownItemsListView.DataSource = productCatalogues.OrderBy(x => x.Name);
+            productCatalogues = productCatalogues.OrderBy(x => x.Name).ToList();
+            DropDownItemsListView.DataSource = productCatalogues;
             DropDownItemsListView.DataBind();
+        }
+
+        protected void DropDownItemsListView_OnItemCommand(object sender, ListViewCommandEventArgs e)
+        {
+            var selectedCatalogue = productCatalogues[e.Item.DataItemIndex];
+            Session["ProductCatalogue"] = selectedCatalogue;
+            Response.Redirect("ProductCataloguePage.aspx");
         }
     }
 }
