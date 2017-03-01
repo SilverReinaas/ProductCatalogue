@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Web;
@@ -14,13 +15,22 @@ namespace WebPage
         private ProductCatalogue productCatalogue;
         protected void Page_Load(object sender, EventArgs e)
         {
-            //productCatalogue = (ProductCatalogue)Session["ProductCatalogue"];
             productCatalogue =
                 ProductCatalogue.GetCatalogues()
                     .FirstOrDefault(x => x.Id == Request.QueryString["Id"]);
             if(productCatalogue == null) return;
 
             ProductCatalogueNameLabel.InnerText = productCatalogue.Name;
+            if (!IsPostBack)
+            {
+                CatalogueEntriesListView.DataSource = productCatalogue.CatalogueEntries;
+                CatalogueEntriesListView.DataBind();
+            }
+        }
+
+        protected void CatalogueEntriesListView_OnPagePropertiesChanging(object sender, PagePropertiesChangingEventArgs e)
+        {
+            EntriesDataPager.SetPageProperties(e.StartRowIndex, e.MaximumRows, false);
             CatalogueEntriesListView.DataSource = productCatalogue.CatalogueEntries;
             CatalogueEntriesListView.DataBind();
         }

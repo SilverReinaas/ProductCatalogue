@@ -1,10 +1,11 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="ProductCataloguePage.aspx.cs" Inherits="WebPage.ProductCataloguePage" %>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <h1 runat="server" ID="ProductCatalogueNameLabel"></h1>
-    <asp:ListView runat="server" ID="CatalogueEntriesListView" OnItemCommand="CatalogueEntriesListView_OnItemCommand" GroupItemCount="4">
+    <asp:ListView runat="server" ID="CatalogueEntriesListView" OnItemCommand="CatalogueEntriesListView_OnItemCommand" GroupItemCount="4" OnPagePropertiesChanging="CatalogueEntriesListView_OnPagePropertiesChanging">
         <LayoutTemplate>
             <ul class="productList">
                 <li runat="server" id="groupPlaceholder"></li>
+
             </ul>
         </LayoutTemplate>
         <ItemTemplate>
@@ -24,4 +25,12 @@
             </ul>
         </GroupTemplate>
     </asp:ListView>
+    <asp:DataPager ID="EntriesDataPager" runat="server" PagedControlID="CatalogueEntriesListView" PageSize="16">
+    <Fields>
+        <asp:NextPreviousPagerField ButtonType="Button" ShowFirstPageButton="false" ShowPreviousPageButton="True"
+            ShowNextPageButton="False" />
+        <asp:NumericPagerField ButtonType="Link" />
+        <asp:NextPreviousPagerField ButtonType="Button" ShowNextPageButton="true" ShowLastPageButton="false" ShowPreviousPageButton = "false" />
+    </Fields>
+</asp:DataPager>
 </asp:Content>

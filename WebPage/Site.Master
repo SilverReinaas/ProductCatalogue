@@ -33,6 +33,9 @@
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
             </asp:ContentPlaceHolder>
         </div>
+        <div class="footer" style="height: 100px">
+            
+        </div>
     </form>
 </body>
 </html>
