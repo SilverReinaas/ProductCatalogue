@@ -1,7 +1,7 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Open.Archetypes.ProductClasses;
+using Open.Archetypes.ProductClasses.Catalogue;
 
-namespace Open.Tests.Archetypes.ProductClasses
+namespace Open.Tests.Archetypes.ProductClasses.Catalogue
 {
     [TestClass]
     public class ProductCategoryTests : ClassTests<ProductCatalogue>

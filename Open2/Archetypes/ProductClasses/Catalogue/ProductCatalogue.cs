@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using Open.Archetypes.BaseClasses;
 
-namespace Open.Archetypes.ProductClasses
+namespace Open.Archetypes.ProductClasses.Catalogue
 {
     public class ProductCatalogue : UniqueEntity
     {

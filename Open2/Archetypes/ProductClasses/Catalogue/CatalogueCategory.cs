@@ -1,11 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Open.Archetypes.BaseClasses;
+﻿using Open.Archetypes.BaseClasses;
 
-namespace Open.Archetypes.ProductClasses
+namespace Open.Archetypes.ProductClasses.Catalogue
 {
     public class CatalogueCategory : UniqueEntity
     {
