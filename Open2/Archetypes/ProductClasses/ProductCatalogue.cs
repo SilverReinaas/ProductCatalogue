@@ -7,7 +7,13 @@ namespace Open.Archetypes.ProductClasses
     {
         private List<CatalogueEntry> catalogueEntries;
         private List<CatalogueCategory> catalogueCategories;
-        public string Name { get; set; }
+        private string name;
+        public string Name
+        {
+            get { return SetDefault(ref name); }
+            set { SetValue(ref name, value); }
+        }
+
         public List<CatalogueEntry> CatalogueEntries
         {
             get { return catalogueEntries ?? new List<CatalogueEntry>(); }

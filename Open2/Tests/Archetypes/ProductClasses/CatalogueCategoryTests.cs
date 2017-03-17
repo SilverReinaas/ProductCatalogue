@@ -30,6 +30,5 @@ namespace Open.Tests.Archetypes.ProductClasses
             MyCatalogueCategory.Name = "Marion";
             Assert.AreEqual("Marion", MyCatalogueCategory.Name);
         }
-
     }
 }
