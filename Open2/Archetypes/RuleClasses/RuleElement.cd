@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Open.Archetypes.RuleClasses.RuleElement">
+    <Position X="5.5" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIAIAAAAQAAAAAAIQAAAAEAAAAAAAAAAAABAA=</HashCode>
+      <FileName>RuleClasses\RuleElement.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Open.Archetypes.RuleClasses.Operand">
+    <Position X="5.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAAAIAAAAAAAAIAAAAAQAAABAAAAAAAAAAABAA=</HashCode>
+      <FileName>RuleClasses\Operand.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Open.Archetypes.RuleClasses.Operator">
+    <Position X="3.25" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAIAAAAAAQAAAIAAAQAAAAABAAAAAEAAAABAAA=</HashCode>
+      <FileName>RuleClasses\Operator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Open.Archetypes.RuleClasses.Variable&lt;T&gt;">
+    <Position X="3.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAgAAAgYAAAIAAAEACAAAAQQAgAAAABAk=</HashCode>
+      <FileName>RuleClasses\Variable.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Open.Archetypes.RuleClasses.BooleanVariable" Collapsed="true">
+    <Position X="0.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAIAAAAAAAAAAIAAAAAAAAABAAAAAAAAAAAAAA=</HashCode>
+      <FileName>RuleClasses\BooleanVariable.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Open.Archetypes.RuleClasses.DateTimeVariable" Collapsed="true">
+    <Position X="0.5" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAIAAAAAAAAAIIAAAAAAAAABAAAAAAAAAAAAAA=</HashCode>
+      <FileName>RuleClasses\DateTimeVariable.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Open.Archetypes.RuleClasses.DecimalVariable" Collapsed="true">
+    <Position X="0.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAIAAAAAAAAAAIAAAAAAAAABAAAAAAAAAAAAAA=</HashCode>
+      <FileName>RuleClasses\DecimalVariable.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Open.Archetypes.RuleClasses.DoubleVariable" Collapsed="true">
+    <Position X="0.5" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAIAAAAAAAAAAIAAAAAAAAABAAAAAAAAAAAAAA=</HashCode>
+      <FileName>RuleClasses\DoubleVariable.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Open.Archetypes.RuleClasses.IntegerVariable" Collapsed="true">
+    <Position X="0.5" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAIAAAAAAAAAAIAAAAAAAAABAAAAAAAAAAAAAA=</HashCode>
+      <FileName>RuleClasses\IntegerVariable.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Open.Archetypes.RuleClasses.StringVariable" Collapsed="true">
+    <Position X="0.5" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAIAAAAgAAAAYIAAAAAAEAABAAAAAAgAAAAAAk=</HashCode>
+      <FileName>RuleClasses\StringVariable.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Open.Archetypes.BaseClasses.Archetype">
+    <Position X="7.5" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIAQAAAgAAAAAAACAAAAAAAAAAQAAAAABAABA=</HashCode>
+      <FileName>BaseClasses\Archetype.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

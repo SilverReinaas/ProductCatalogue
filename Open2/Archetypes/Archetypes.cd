@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Open.Archetypes.BaseClasses.Archetypes&lt;T&gt;">
+    <Position X="3" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEIAAkgAAAAAABBQCAAUhAQAAIBIAAAECCEAAABUIAE=</HashCode>
+      <FileName>BaseClasses\Archetypes.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Open.Archetypes.BaseClasses.Archetype">
+    <Position X="5" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIAQAAAgAAAAAAACAAAAAAAAAAQAAAAABAACA=</HashCode>
+      <FileName>BaseClasses\Archetype.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Open.Archetypes.BaseClasses.Attributes" Collapsed="true">
+    <Position X="0.5" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAA=</HashCode>
+      <FileName>BaseClasses\Attributes.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Open.Archetypes.BaseClasses.Entities" Collapsed="true">
+    <Position X="0.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAIBAAAQAAAAAAAAAA=</HashCode>
+      <FileName>BaseClasses\Entities.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Open.Archetypes.BaseClasses.EntityTypes" Collapsed="true">
+    <Position X="0.5" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAIBAAAQAAAAAAAAAA=</HashCode>
+      <FileName>BaseClasses\EntityTypes.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Open.Archetypes.RelationshipClasses.RelationshipConstraints" Collapsed="true">
+    <Position X="0.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAIAAAAAAAAAAAAAAABAAAQAAAAAAAAAA=</HashCode>
+      <FileName>RelationshipClasses\RelationshipConstraints.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Open.Archetypes.RelationshipClasses.Relationships" Collapsed="true">
+    <Position X="0.5" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAQAAACAAAAAAAAAAAAAAAAABAAIQAAAAAAAAAA=</HashCode>
+      <FileName>RelationshipClasses\Relationships.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Open.Archetypes.RelationshipClasses.RelationshipTypes" Collapsed="true">
+    <Position X="0.5" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAIBAAAQAAAAAAAAAA=</HashCode>
+      <FileName>RelationshipClasses\RelationshipTypes.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Open.Archetypes.RoleClasses.RoleConstraints" Collapsed="true">
+    <Position X="0.5" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAIAAAAAAAAAAAAAAIBAAAQAAAAAAAAAA=</HashCode>
+      <FileName>RoleClasses\RoleConstraints.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Open.Archetypes.RoleClasses.Roles" Collapsed="true">
+    <Position X="0.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAAAAAAAAAAAAAAAAAAAAAAIBAAAQAAAAAAAAAA=</HashCode>
+      <FileName>RoleClasses\Roles.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Open.Archetypes.RoleClasses.RoleTypes" Collapsed="true">
+    <Position X="0.5" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAIBAAAQAAAAAAAAAA=</HashCode>
+      <FileName>RoleClasses\RoleTypes.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

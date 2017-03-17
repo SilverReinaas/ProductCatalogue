@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Open.Tests.CommonTests&lt;T&gt;">
+    <Position X="0.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAUAEAAAAgAEYAAAECAAICQAgAAEAAIAwACAAAAEJAA=</HashCode>
+      <FileName>CommonTests.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Open.Tests.ClassTests&lt;T&gt;">
+    <Position X="2.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAIAAAAgABAAAAACAAACAAAAAAAAIAQAAEAACAAAA=</HashCode>
+      <FileName>ClassTests.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Open.Tests.PropertyTests">
+    <Position X="4.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAEAAAAAEAAAA=</HashCode>
+      <FileName>PropertyTests.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

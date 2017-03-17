@@ -1,0 +1,184 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1339F9E9-C749-44DB-A5B1-17041AC0E7B6}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Open.Tests</RootNamespace>
+    <AssemblyName>Open.Tests</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+    <ReferencePath>$(ProgramFiles)\Common Files\microsoft shared\VSTT\$(VisualStudioVersion)\UITestExtensionPackages</ReferencePath>
+    <IsCodedUITest>False</IsCodedUITest>
+    <TestProjectType>UnitTest</TestProjectType>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+  </ItemGroup>
+  <Choose>
+    <When Condition="('$(VisualStudioVersion)' == '10.0' or '$(VisualStudioVersion)' == '') and '$(TargetFrameworkVersion)' == 'v3.5'">
+      <ItemGroup>
+        <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+      </ItemGroup>
+    </When>
+    <Otherwise>
+      <ItemGroup>
+        <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework">
+          <Private>False</Private>
+        </Reference>
+      </ItemGroup>
+    </Otherwise>
+  </Choose>
+  <ItemGroup>
+    <Compile Include="Aids\GetSolutionTests.cs" />
+    <Compile Include="Aids\CharTests.cs" />
+    <Compile Include="Aids\GetEnumTests.cs" />
+    <Compile Include="Aids\IsoGenderTests.cs" />
+    <Compile Include="Aids\LogTests.cs" />
+    <Compile Include="Aids\GetClassTests.cs" />
+    <Compile Include="Aids\JsonTests.cs" />
+    <Compile Include="Aids\GetPublicTests.cs" />
+    <Compile Include="Aids\GetRandomTests.cs" />
+    <Compile Include="Aids\SafeTests.cs" />
+    <Compile Include="Aids\GetStringTests.cs" />
+    <Compile Include="Aids\IsNamespaceTests.cs" />
+    <Compile Include="Aids\UseCultureTests.cs" />
+    <Compile Include="Aids\XmlTests.cs" />
+    <Compile Include="Aids\ValueChangedEventArgsTests.cs" />
+    <Compile Include="Aids\UtilsTests.cs" />
+    <Compile Include="Archetypes\BaseClasses\ArchetypeTests.cs" />
+    <Compile Include="Archetypes\BaseClasses\AttributedEntityTests.cs" />
+    <Compile Include="Archetypes\BaseClasses\AttributesTests.cs" />
+    <Compile Include="Archetypes\BaseClasses\AttributeTests.cs" />
+    <Compile Include="Archetypes\BaseClasses\EntitiesTests.cs" />
+    <Compile Include="Archetypes\BaseClasses\EntityTests.cs" />
+    <Compile Include="Archetypes\BaseClasses\EntityTypesTests.cs" />
+    <Compile Include="Archetypes\BaseClasses\EntityTypeTests.cs" />
+    <Compile Include="Archetypes\BaseClasses\PeriodTests.cs" />
+    <Compile Include="Archetypes\BaseClasses\IntervalTests.cs" />
+    <Compile Include="Archetypes\BaseClasses\SerializableTests.cs" />
+    <Compile Include="Archetypes\BaseClasses\CommonTests.cs" />
+    <Compile Include="Archetypes\BaseClasses\RootTests.cs" />
+    <Compile Include="Archetypes\BaseClasses\ArchetypesTests.cs" />
+    <Compile Include="Archetypes\BaseClasses\TemporalEntityTests.cs" />
+    <Compile Include="Archetypes\BaseClasses\UniqueEntityTests.cs" />
+    <Compile Include="Archetypes\BaseClasses\BaseEntityTests.cs" />
+    <Compile Include="Archetypes\BaseClasses\BaseTypeTests.cs" />
+    <Compile Include="Archetypes\ContactClasses\ContactTests.cs" />
+    <Compile Include="Archetypes\InventoryClasses\InventoryTests.cs" />
+    <Compile Include="Archetypes\MoneyClasses\MoneyTests.cs" />
+    <Compile Include="Archetypes\OrderClasses\OrderTests.cs" />
+    <Compile Include="Archetypes\PartyClasses\PartyTests.cs" />
+    <Compile Include="Archetypes\ProcessClasses\ProcessTests.cs" />
+    <Compile Include="Archetypes\ProductClasses\ProductTests.cs" />
+    <Compile Include="Archetypes\ProductClasses\CanceledServiceTests.cs" />
+    <Compile Include="Archetypes\ProductClasses\CompletedServiceTests.cs" />
+    <Compile Include="Archetypes\ProductClasses\ExecutingServiceTests.cs" />
+    <Compile Include="Archetypes\ProductClasses\ScheduledServiceTests.cs" />
+    <Compile Include="Archetypes\ProductClasses\ServiceTests.cs" />
+    <Compile Include="Archetypes\QuantityClasses\QuantityTests.cs" />
+    <Compile Include="Archetypes\RelationshipClasses\RelationshipTests.cs" />
+    <Compile Include="Archetypes\RelationshipClasses\RelationshipConstraintTests.cs" />
+    <Compile Include="Archetypes\RelationshipClasses\RelationshipConstraintsTests.cs" />
+    <Compile Include="Archetypes\RelationshipClasses\RelationshipsTests.cs" />
+    <Compile Include="Archetypes\RelationshipClasses\RelationshipTypeTests.cs" />
+    <Compile Include="Archetypes\RelationshipClasses\RelationshipTypesTests.cs" />
+    <Compile Include="Archetypes\RoleClasses\RoleTests.cs" />
+    <Compile Include="Archetypes\RoleClasses\RoleConstraintTests.cs" />
+    <Compile Include="Archetypes\RoleClasses\RoleConstraintsTests.cs" />
+    <Compile Include="Archetypes\RoleClasses\RolesTests.cs" />
+    <Compile Include="Archetypes\RoleClasses\RoleTypeTests.cs" />
+    <Compile Include="Archetypes\RoleClasses\RoleTypesTests.cs" />
+    <Compile Include="Archetypes\RuleClasses\RuleTests.cs" />
+    <Compile Include="Archetypes\RuleClasses\BooleanVariableTests.cs" />
+    <Compile Include="Archetypes\RuleClasses\DateTimeVariableTests.cs" />
+    <Compile Include="Archetypes\RuleClasses\DecimalVariableTests.cs" />
+    <Compile Include="Archetypes\RuleClasses\DoubleVariableTests.cs" />
+    <Compile Include="Archetypes\RuleClasses\IntegerVariableTests.cs" />
+    <Compile Include="Archetypes\RuleClasses\OperandTests.cs" />
+    <Compile Include="Archetypes\RuleClasses\OperationTests.cs" />
+    <Compile Include="Archetypes\RuleClasses\OperatorTests.cs" />
+    <Compile Include="Archetypes\RuleClasses\RuleElementTests.cs" />
+    <Compile Include="Archetypes\RuleClasses\StringVariableTests.cs" />
+    <Compile Include="Archetypes\RuleClasses\VariableTests.cs" />
+    <Compile Include="Archetypes\ValueClasses\ValueTests.cs" />
+    <Compile Include="ClassTests.cs" />
+    <Compile Include="Data\DummyTests.cs" />
+    <Compile Include="IsAidsTested.cs" />
+    <Compile Include="IsArchetypesTested.cs" />
+    <Compile Include="IsDataTested.cs" />
+    <Compile Include="IsLogicTested.cs" />
+    <Compile Include="IsTestedBase.cs" />
+    <Compile Include="Logic\DummyTests.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PropertyTests.cs" />
+    <Compile Include="CommonTests.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Aids\Aids.csproj">
+      <Project>{b4620d17-caa0-4f62-ad02-812b7254f6ae}</Project>
+      <Name>Aids</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Archetypes\Archetypes.csproj">
+      <Project>{ee23228f-dc50-4c25-bbc3-5c11d8e29c32}</Project>
+      <Name>Archetypes</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Data\Data.csproj">
+      <Project>{b5794ad7-2074-41ca-b5ca-2ca672e44776}</Project>
+      <Name>Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Logic\Logic.csproj">
+      <Project>{1e1e7079-cb4f-480c-b881-1066404707ce}</Project>
+      <Name>Logic</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Choose>
+    <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
+      <ItemGroup>
+        <Reference Include="Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+        <Reference Include="Microsoft.VisualStudio.TestTools.UITest.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+        <Reference Include="Microsoft.VisualStudio.TestTools.UITest.Extension, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+        <Reference Include="Microsoft.VisualStudio.TestTools.UITesting, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+      </ItemGroup>
+    </When>
+  </Choose>
+  <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

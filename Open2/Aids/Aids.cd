@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Open.Aids.GetClass">
+    <Position X="0.5" Y="0.75" Width="2" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAIACoAZQFIAACAAA=</HashCode>
+      <FileName>GetClass.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Open.Aids.GetRandom">
+    <Position X="0.5" Y="3.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>QgAEAAAAIAAgAAAxQAAAAgQAIAACACQAEEAAAAAgAAA=</HashCode>
+      <FileName>GetRandom.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Open.Aids.GetEnum">
+    <Position X="3.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>GetEnum.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Open.Aids.GetSolution">
+    <Position X="3.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAEBAAABAAAAAAQAAgAAAIAAAAAAAAAAAAA=</HashCode>
+      <FileName>GetSolution.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Open.Aids.Log">
+    <Position X="3.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAgAAASAAAAAAAAAAAAAAAAAAQABAIABAAAA=</HashCode>
+      <FileName>Log.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

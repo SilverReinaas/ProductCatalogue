@@ -1,0 +1,122 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{EE23228F-DC50-4C25-BBC3-5C11D8E29C32}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Open.Archetypes</RootNamespace>
+    <AssemblyName>Open.Archetypes</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BaseClasses\Archetype.cs" />
+    <Compile Include="BaseClasses\Archetypes.cs" />
+    <Compile Include="BaseClasses\Attribute.cs" />
+    <Compile Include="BaseClasses\AttributedEntity.cs" />
+    <Compile Include="BaseClasses\Attributes.cs" />
+    <Compile Include="BaseClasses\BaseEntity.cs" />
+    <Compile Include="BaseClasses\BaseType.cs" />
+    <Compile Include="BaseClasses\Common.cs" />
+    <Compile Include="BaseClasses\Entities.cs" />
+    <Compile Include="BaseClasses\Entity.cs" />
+    <Compile Include="BaseClasses\EntityType.cs" />
+    <Compile Include="BaseClasses\EntityTypes.cs" />
+    <Compile Include="BaseClasses\Period.cs" />
+    <Compile Include="BaseClasses\Interval.cs" />
+    <Compile Include="BaseClasses\Root.cs" />
+    <Compile Include="BaseClasses\Serializable.cs" />
+    <Compile Include="BaseClasses\TemporalEntity.cs" />
+    <Compile Include="BaseClasses\UniqueEntity.cs" />
+    <Compile Include="ContactClasses\Contact.cs" />
+    <Compile Include="InventoryClasses\Inventory.cs" />
+    <Compile Include="MoneyClasses\Money.cs" />
+    <Compile Include="OrderClasses\Order.cs" />
+    <Compile Include="PartyClasses\Party.cs" />
+    <Compile Include="ProcessClasses\Process.cs" />
+    <Compile Include="ProductClasses\CanceledService.cs" />
+    <Compile Include="ProductClasses\CompletedService.cs" />
+    <Compile Include="ProductClasses\ExecutingService.cs" />
+    <Compile Include="ProductClasses\Product.cs" />
+    <Compile Include="ProductClasses\ScheduledService.cs" />
+    <Compile Include="ProductClasses\Service.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QuantityClasses\Quantity.cs" />
+    <Compile Include="RelationshipClasses\Relationship.cs" />
+    <Compile Include="RelationshipClasses\RelationshipConstraint.cs" />
+    <Compile Include="RelationshipClasses\RelationshipConstraints.cs" />
+    <Compile Include="RelationshipClasses\Relationships.cs" />
+    <Compile Include="RelationshipClasses\RelationshipType.cs" />
+    <Compile Include="RelationshipClasses\RelationshipTypes.cs" />
+    <Compile Include="RoleClasses\Role.cs" />
+    <Compile Include="RoleClasses\RoleConstraint.cs" />
+    <Compile Include="RoleClasses\RoleConstraints.cs" />
+    <Compile Include="RoleClasses\Roles.cs" />
+    <Compile Include="RoleClasses\RoleType.cs" />
+    <Compile Include="RoleClasses\RoleTypes.cs" />
+    <Compile Include="RuleClasses\BooleanVariable.cs" />
+    <Compile Include="RuleClasses\DateTimeVariable.cs" />
+    <Compile Include="RuleClasses\DecimalVariable.cs" />
+    <Compile Include="RuleClasses\DoubleVariable.cs" />
+    <Compile Include="RuleClasses\IntegerVariable.cs" />
+    <Compile Include="RuleClasses\Operand.cs" />
+    <Compile Include="RuleClasses\Operation.cs" />
+    <Compile Include="RuleClasses\Operator.cs" />
+    <Compile Include="RuleClasses\Rule.cs" />
+    <Compile Include="RuleClasses\RuleElement.cs" />
+    <Compile Include="RuleClasses\StringVariable.cs" />
+    <Compile Include="RuleClasses\Variable.cs" />
+    <Compile Include="ValueClasses\Value.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Entity.cd" />
+    <None Include="Period.cd" />
+    <None Include="ProductClasses\ServiceStates.cd" />
+    <None Include="Roles.cd" />
+    <None Include="RuleClasses\RuleElement.cd" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Aids\Aids.csproj">
+      <Project>{b4620d17-caa0-4f62-ad02-812b7254f6ae}</Project>
+      <Name>Aids</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

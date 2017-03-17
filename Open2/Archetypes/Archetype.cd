@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Open.Archetypes.BaseClasses.Root">
+    <Position X="7.75" Y="0.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAAAAAAAAAAAQAAAAAAAAAAIAAIAAAAAAAAAAA=</HashCode>
+      <FileName>BaseClasses\Root.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Open.Archetypes.BaseClasses.Serializable">
+    <Position X="5.5" Y="0.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAEICAAAAAAAAA=</HashCode>
+      <FileName>BaseClasses\Serializable.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Open.Archetypes.BaseClasses.Common">
+    <Position X="3.25" Y="0.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AIAgIAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAABA=</HashCode>
+      <FileName>BaseClasses\Common.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Open.Archetypes.BaseClasses.Archetype">
+    <Position X="0.75" Y="0.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIAQAAAgAAAAAAACAAAAAAAAAAQAAAAABAACA=</HashCode>
+      <FileName>BaseClasses\Archetype.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

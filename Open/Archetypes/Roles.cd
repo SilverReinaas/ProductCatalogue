@@ -1,0 +1,150 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Open.Archetypes.RoleClasses.Role">
+    <Position X="0.5" Y="2.25" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIAAAAAAAAAAAAAAgAAQAoBAAAAQAAAAAAAAA=</HashCode>
+      <FileName>RoleClasses\Role.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Type" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Open.Archetypes.BaseClasses.Entity">
+    <Position X="0.5" Y="0.5" Width="5.25" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <AssociationLine Name="Roles" Type="Open.Archetypes.RoleClasses.Role" FixedFromPoint="true">
+      <Path>
+        <Point X="1.125" Y="1.733" />
+        <Point X="1.125" Y="2.25" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAgAABAAAAQAAAAAAAAA=</HashCode>
+      <FileName>BaseClasses\Entity.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Type" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="Roles" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Open.Archetypes.BaseClasses.EntityType">
+    <Position X="7.25" Y="0.5" Width="5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <AssociationLine Name="Type" Type="Open.Archetypes.BaseClasses.EntityType" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="12.25" Y="1.618" />
+        <Point X="13" Y="1.618" />
+        <Point X="13" Y="0.681" />
+        <Point X="12.25" Y="0.681" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAQAAAAAAAAA=</HashCode>
+      <FileName>BaseClasses\EntityType.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Type" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Open.Archetypes.RelationshipClasses.Relationship">
+    <Position X="0.5" Y="5.5" Width="2.5" />
+    <AssociationLine Name="Provider" Type="Open.Archetypes.RoleClasses.Role" FixedFromPoint="true">
+      <Path>
+        <Point X="1.375" Y="5.5" />
+        <Point X="1.375" Y="4.963" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="Consumer" Type="Open.Archetypes.RoleClasses.Role" FixedFromPoint="true">
+      <Path>
+        <Point X="2.5" Y="5.5" />
+        <Point X="2.5" Y="4.963" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAICAAEAAAABAAAAAAAAAAADAAAAQgCAAAAAAA=</HashCode>
+      <FileName>RelationshipClasses\Relationship.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Type" />
+      <Property Name="Provider" />
+      <Property Name="Consumer" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Open.Archetypes.RelationshipClasses.RelationshipType">
+    <Position X="3.75" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAABBAAAQAAAAAAAAA=</HashCode>
+      <FileName>RelationshipClasses\RelationshipType.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Type" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="Constraints" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Open.Archetypes.RelationshipClasses.RelationshipConstraint">
+    <Position X="6.75" Y="5" Width="2.75" />
+    <AssociationLine Name="ValidConsumerRoleType" Type="Open.Archetypes.RoleClasses.RoleType" FixedFromPoint="true">
+      <Path>
+        <Point X="6.875" Y="5" />
+        <Point X="6.875" Y="4.233" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="ValidProviderRoleType" Type="Open.Archetypes.RoleClasses.RoleType" FixedFromPoint="true">
+      <Path>
+        <Point X="8.875" Y="5" />
+        <Point X="8.875" Y="4.233" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIBAAAAABIAMAAAAACAAAABgAAAIAAAAAABAA=</HashCode>
+      <FileName>RelationshipClasses\RelationshipConstraint.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="ValidConsumerRoleType" />
+      <Property Name="ValidProviderRoleType" />
+      <Property Name="RelationshipType" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Open.Archetypes.RoleClasses.RoleType">
+    <Position X="4.25" Y="3" Width="5" />
+    <AssociationLine Name="Type" Type="Open.Archetypes.RoleClasses.RoleType" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="5.422" Y="3" />
+        <Point X="5.422" Y="2.25" />
+        <Point X="8.391" Y="2.25" />
+        <Point X="8.391" Y="3" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAABBAAAQAAAAAAAAA=</HashCode>
+      <FileName>RoleClasses\RoleType.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Type" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="Constraints" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Open.Archetypes.RoleClasses.RoleConstraint">
+    <Position X="10.75" Y="2.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAIAAAAAAAgAAAAAAAAAAAABAgAAABIAAAAACA=</HashCode>
+      <FileName>RoleClasses\RoleConstraint.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="ValidPerformerType" />
+      <Property Name="RoleType" />
+    </ShowAsAssociation>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

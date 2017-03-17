@@ -1,0 +1,51 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aids", "Aids\Aids.csproj", "{B4620D17-CAA0-4F62-AD02-812B7254F6AE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Archetypes", "Archetypes\Archetypes.csproj", "{EE23228F-DC50-4C25-BBC3-5C11D8E29C32}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Data", "Data\Data.csproj", "{B5794AD7-2074-41CA-B5CA-2CA672E44776}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Logic", "Logic\Logic.csproj", "{1E1E7079-CB4F-480C-B881-1066404707CE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Tests\Tests.csproj", "{1339F9E9-C749-44DB-A5B1-17041AC0E7B6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{91E7D4AA-8486-4E58-A4E8-EB9E0AC3CF4D}"
+	ProjectSection(SolutionItems) = preProject
+		Resources\ReSharperOptions.DotSettings = Resources\ReSharperOptions.DotSettings
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B4620D17-CAA0-4F62-AD02-812B7254F6AE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B4620D17-CAA0-4F62-AD02-812B7254F6AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B4620D17-CAA0-4F62-AD02-812B7254F6AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B4620D17-CAA0-4F62-AD02-812B7254F6AE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EE23228F-DC50-4C25-BBC3-5C11D8E29C32}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EE23228F-DC50-4C25-BBC3-5C11D8E29C32}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EE23228F-DC50-4C25-BBC3-5C11D8E29C32}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EE23228F-DC50-4C25-BBC3-5C11D8E29C32}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B5794AD7-2074-41CA-B5CA-2CA672E44776}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B5794AD7-2074-41CA-B5CA-2CA672E44776}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B5794AD7-2074-41CA-B5CA-2CA672E44776}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B5794AD7-2074-41CA-B5CA-2CA672E44776}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1E1E7079-CB4F-480C-B881-1066404707CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1E1E7079-CB4F-480C-B881-1066404707CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1E1E7079-CB4F-480C-B881-1066404707CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1E1E7079-CB4F-480C-B881-1066404707CE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1339F9E9-C749-44DB-A5B1-17041AC0E7B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1339F9E9-C749-44DB-A5B1-17041AC0E7B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1339F9E9-C749-44DB-A5B1-17041AC0E7B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1339F9E9-C749-44DB-A5B1-17041AC0E7B6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

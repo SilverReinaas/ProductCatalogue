@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Open.Archetypes.BaseClasses.Entity">
+    <Position X="0.5" Y="2.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAgAABAAAAQAAAAAAAAA=</HashCode>
+      <FileName>BaseClasses\Entity.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Open.Archetypes.BaseClasses.UniqueEntity">
+    <Position X="3.5" Y="5.75" Width="1.75" />
+    <InheritanceLine Type="Open.Archetypes.BaseClasses.AttributedEntity" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="3.875" Y="5.233" />
+        <Point X="3.875" Y="5.75" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAIAAAAIAAAAAEAAAAAAAAAQAAAAAAAAAAAAAAAAQAA=</HashCode>
+      <FileName>BaseClasses\UniqueEntity.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Attributes" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Open.Archetypes.BaseClasses.BaseEntity&lt;T&gt;">
+    <Position X="0.5" Y="5.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAgAQAAIAAAAAA=</HashCode>
+      <FileName>BaseClasses\BaseEntity.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Open.Archetypes.BaseClasses.AttributedEntity">
+    <Position X="2.5" Y="4" Width="1.75" />
+    <InheritanceLine Type="Open.Archetypes.BaseClasses.TemporalEntity" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="3.188" Y="3.684" />
+        <Point X="3.188" Y="4" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BaseClasses\AttributedEntity.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Open.Archetypes.BaseClasses.TemporalEntity">
+    <Position X="2.5" Y="2" Width="1.5" />
+    <InheritanceLine Type="Open.Archetypes.BaseClasses.Archetype" FixedToPoint="true">
+      <Path>
+        <Point X="9.5" Y="2" />
+        <Point X="9.5" Y="1.625" />
+        <Point X="3.312" Y="1.625" />
+        <Point X="3.312" Y="2" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAQ=</HashCode>
+      <FileName>BaseClasses\TemporalEntity.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Valid" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Open.Archetypes.BaseClasses.Archetype">
+    <Position X="8.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIAQAAAgAAAAAAACAAAAAAAAAAQAAAAABAACA=</HashCode>
+      <FileName>BaseClasses\Archetype.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Open.Archetypes.BaseClasses.Attribute">
+    <Position X="8.75" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIAAIAAAAAAAAAAAAAAAIABEAAAABAAAAAAAA=</HashCode>
+      <FileName>BaseClasses\Attribute.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Open.Archetypes.BaseClasses.Period">
+    <Position X="4.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAIAAAAAAgAAAoAAAAAAAAABAAAAAAgAAAAAAA=</HashCode>
+      <FileName>BaseClasses\Period.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Open.Archetypes.BaseClasses.Interval&lt;T&gt;">
+    <Position X="6.75" Y="2" Width="1.5" />
+    <InheritanceLine Type="Open.Archetypes.BaseClasses.Archetype" FixedToPoint="true">
+      <Path>
+        <Point X="8.75" Y="3.472" />
+        <Point X="8.25" Y="3.472" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AgAAAAAAAAAQAAAAAAAAAEAAAAAIAAAAgAAAAABAAAA=</HashCode>
+      <FileName>BaseClasses\Interval.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
