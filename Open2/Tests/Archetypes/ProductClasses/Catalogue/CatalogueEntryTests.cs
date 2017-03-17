@@ -6,33 +6,42 @@ namespace Open.Tests.Archetypes.ProductClasses.Catalogue
     [TestClass]
     public class CatalogueEntryTests : ClassTests<CatalogueEntry>
     {
-        public CatalogueEntry k;
+        public CatalogueEntry MyCatalogueEntry;
         [TestInitialize]
         public void InitializeTest()
         {
-            k = new CatalogueEntry();
+            MyCatalogueEntry = new CatalogueEntry();
         }
         [TestCleanup]
         public void CleanUpTest()
         {
-            k = null;
+            MyCatalogueEntry = null;
         }
         [TestMethod]
         public void ConstructorTest()
         {
-            Assert.IsNotNull(k);
+            Assert.IsNotNull(MyCatalogueEntry);
         }
 
         [TestMethod]
-        public void ProductTypeTest()
+        public void ProductTypesTest()
         {
-            Assert.IsNotNull(k.ProductTypes);
+            Assert.IsNotNull(MyCatalogueEntry.ProductTypes);
         }
 
         [TestMethod]
-        public void ProductCategoryTest()
+        public void ProductCategoriesTest()
         {
-            Assert.IsNotNull(k.ProductCategories);
+            Assert.IsNotNull(MyCatalogueEntry.ProductCategories);
+        }
+        [TestMethod]
+        public void NameTest()
+        {
+            Assert.IsNotNull(MyCatalogueEntry.Name);
+            MyCatalogueEntry.Name = null;
+            Assert.IsNotNull(MyCatalogueEntry.Name);
+            MyCatalogueEntry.Name = "Marion";
+            Assert.AreEqual("Marion", MyCatalogueEntry.Name);
         }
     }
 }

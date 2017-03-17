@@ -5,7 +5,12 @@ namespace Open.Archetypes.ProductClasses.Catalogue
 {
     public class CatalogueEntry : UniqueEntity
     {
-        public string Name { get; set; }
+        private string name;
+        public string Name
+        {
+            get { return SetDefault(ref name); }
+            set { SetValue(ref name, value); }
+        }
         private List<ProductType> productTypes;
         public List<ProductType> ProductTypes
         {
