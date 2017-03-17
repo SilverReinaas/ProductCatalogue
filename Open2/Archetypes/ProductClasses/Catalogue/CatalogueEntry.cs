@@ -6,21 +6,21 @@ namespace Open.Archetypes.ProductClasses.Catalogue
     public class CatalogueEntry : UniqueEntity
     {
         private string name;
+        private Archetypes<ProductType> productTypes;
+        private Archetypes<ProductCategory> productCategories;
         public string Name
         {
             get { return SetDefault(ref name); }
             set { SetValue(ref name, value); }
         }
-        private List<ProductType> productTypes;
-        public List<ProductType> ProductTypes
+        public Archetypes<ProductType> ProductTypes
         {
-            get { return productTypes ?? new List<ProductType>(); }
+            get { return productTypes ?? new Archetypes<ProductType>(); }
             set { productTypes = value; }
         }
-        private List<ProductCategory> productCategories;
-        public List<ProductCategory> ProductCategories
+        public Archetypes<ProductCategory> ProductCategories
         {
-            get { return productCategories ?? new List<ProductCategory>(); }
+            get { return productCategories ?? new Archetypes<ProductCategory>(); }
             set { productCategories = value; }
         }
     }
