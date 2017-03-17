@@ -5,8 +5,8 @@ namespace Open.Archetypes.ProductClasses.Catalogue
 {
     public class ProductCatalogue : UniqueEntity
     {
-        private List<CatalogueEntry> catalogueEntries;
-        private List<CatalogueCategory> catalogueCategories;
+        private Archetypes<CatalogueEntry> catalogueEntries;
+        private Archetypes<CatalogueCategory> catalogueCategories;
         private string name;
         public string Name
         {
@@ -14,15 +14,15 @@ namespace Open.Archetypes.ProductClasses.Catalogue
             set { SetValue(ref name, value); }
         }
 
-        public List<CatalogueEntry> CatalogueEntries
+        public Archetypes<CatalogueEntry> CatalogueEntries
         {
-            get { return catalogueEntries ?? new List<CatalogueEntry>(); }
+            get { return catalogueEntries ?? new Archetypes<CatalogueEntry>(); }
             set { catalogueEntries = value; }
         }
 
-        public List<CatalogueCategory> CatalogueCategories
+        public Archetypes<CatalogueCategory> CatalogueCategories
         {
-            get { return catalogueCategories ?? new List<CatalogueCategory>(); }
+            get { return catalogueCategories ?? new Archetypes<CatalogueCategory> (); }
             set { catalogueCategories = value; }
         }
     }
