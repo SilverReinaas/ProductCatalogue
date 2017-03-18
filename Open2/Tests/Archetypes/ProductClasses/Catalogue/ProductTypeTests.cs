@@ -22,5 +22,14 @@ namespace Open.Tests.Archetypes.ProductClasses.Catalogue
         {
             Assert.IsNotNull(p);
         }
+        [TestMethod]
+        public void NameTest()
+        {
+            Assert.IsNotNull(p.Name);
+            p.Name = null;
+            Assert.IsNotNull(p.Name);
+            p.Name = "abc";
+            Assert.AreEqual("abc", p.Name);
+        }
     }
 }
