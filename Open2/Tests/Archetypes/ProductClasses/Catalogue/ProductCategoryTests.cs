@@ -29,7 +29,11 @@ namespace Open.Tests.Archetypes.ProductClasses.Catalogue
         [TestMethod]
         public void NameTest()
         {
-            Assert.IsNotNull(myProductCategory);
+            Assert.IsNotNull(myProductCategory.Name);
+            myProductCategory.Name = null;
+            Assert.IsNotNull(myProductCategory.Name);
+            myProductCategory.Name = "abc";
+            Assert.AreEqual("abc", myProductCategory.Name);
         }
     }
 }

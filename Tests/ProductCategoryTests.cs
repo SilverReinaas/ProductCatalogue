@@ -26,9 +26,22 @@ namespace Tests
         }
 
         [TestMethod]
-        public void PeriodConstructorTest()
+        public void ConstructorTest()
         {
             Assert.IsNotNull(myProductCategory);
         }
+
+        [TestMethod]
+        public void IdTest()
+        {            
+           
+        }
+        [TestMethod]
+        public void NameTest()
+        {
+           
+        }
+
+      
     }
 }
