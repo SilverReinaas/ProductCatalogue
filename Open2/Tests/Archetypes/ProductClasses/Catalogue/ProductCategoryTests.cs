@@ -4,7 +4,7 @@ using Open.Archetypes.ProductClasses.Catalogue;
 namespace Open.Tests.Archetypes.ProductClasses.Catalogue
 {
     [TestClass]
-    public class ProductCategoryTests : ClassTests<ProductCatalogue>
+    public class ProductCategoryTests : ClassTests<ProductCategory>
     {
         private ProductCategory myProductCategory;
 
