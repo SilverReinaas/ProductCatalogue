@@ -1,10 +1,10 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using System;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Open.Archetypes.ProductClasses.Catalogue;
-
 namespace Open.Tests.Archetypes.ProductClasses.Catalogue
 {
     [TestClass]
-    public class CatalogueEntryTests : ClassTests<CatalogueEntry>
+    public class CatalogueEntryTests : CommonTests<CatalogueEntry>
     {
         public CatalogueEntry MyCatalogueEntry;
         [TestInitialize]
@@ -43,5 +43,9 @@ namespace Open.Tests.Archetypes.ProductClasses.Catalogue
             MyCatalogueEntry.Name = "Marion";
             Assert.AreEqual("Marion", MyCatalogueEntry.Name);
         }
+        protected override CatalogueEntry GetRandomObj()
+        {
+            throw new NotImplementedException();
+        }
     }
-}
+    }
