@@ -1,4 +1,5 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Open.Aids;
 using Open.Archetypes.ProductClasses.Catalogue;
 
 namespace Open.Tests.Archetypes.ProductClasses.Catalogue
@@ -49,7 +50,7 @@ namespace Open.Tests.Archetypes.ProductClasses.Catalogue
 
         protected override ProductCatalogue GetRandomObj()
         {
-            throw new System.NotImplementedException();
+            return ProductCatalogue.Random();
         }
     }
 }
