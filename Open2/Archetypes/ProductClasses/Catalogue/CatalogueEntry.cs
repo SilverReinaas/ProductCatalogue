@@ -24,7 +24,7 @@ namespace Open.Archetypes.ProductClasses.Catalogue
             get { return productCategories ?? new Archetypes<ProductCategory>(); }
             set { productCategories = value; }
         }
-        public static CatalogueEntry GetRandomObj()
+        public static CatalogueEntry Random()
         {
             var result = new CatalogueEntry()
             {
