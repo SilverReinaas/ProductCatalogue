@@ -1,10 +1,11 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Open.Aids;
 using Open.Archetypes.ProductClasses.Catalogue;
 
 namespace Open.Tests.Archetypes.ProductClasses.Catalogue
 {
     [TestClass]
-    public class ProductCategoryTests : ClassTests<ProductCatalogue>
+    public class ProductCategoryTests : CommonTests<ProductCategory>
     {
         private ProductCategory myProductCategory;
 
@@ -29,7 +30,20 @@ namespace Open.Tests.Archetypes.ProductClasses.Catalogue
         [TestMethod]
         public void NameTest()
         {
-            Assert.IsNotNull(myProductCategory);
+            Assert.IsNotNull(myProductCategory.Name);
+            myProductCategory.Name = null;
+            Assert.IsNotNull(myProductCategory.Name);
+            myProductCategory.Name = "abc";
+            Assert.AreEqual("abc", myProductCategory.Name);
+        }
+
+        protected override ProductCategory GetRandomObj()
+        {
+            return new ProductCategory()
+            {
+                Name = GetRandom.String(10, 15),
+                UniqueId = GetRandom.String(10, 15)
+            };
         }
     }
 }

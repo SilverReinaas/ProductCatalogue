@@ -1,4 +1,6 @@
-﻿using Open.Archetypes.BaseClasses;
+﻿using System;
+using Open.Aids;
+using Open.Archetypes.BaseClasses;
 
 namespace Open.Archetypes.ProductClasses.Catalogue
 {
@@ -12,5 +14,13 @@ namespace Open.Archetypes.ProductClasses.Catalogue
             set { SetValue(ref name, value); }
         }
 
+        public static CatalogueCategory Random()
+        {
+            return new CatalogueCategory()
+            {
+                Name = GetRandom.String(10, 15),
+                UniqueId = GetRandom.String(10, 15)
+            };
+        }
     }
 }
