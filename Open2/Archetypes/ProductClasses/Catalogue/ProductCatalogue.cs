@@ -43,6 +43,7 @@ namespace Open.Archetypes.ProductClasses.Catalogue
             {
                 result.CatalogueCategories.Add(CatalogueCategory.Random());
             }
+            return result;
         }
     }
 }
