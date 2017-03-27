@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using Open.Archetypes.BaseClasses;
+﻿using Open.Archetypes.BaseClasses;
 
 namespace Open.Archetypes.ProductClasses.Catalogue
 {
