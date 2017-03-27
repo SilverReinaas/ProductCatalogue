@@ -1,4 +1,5 @@
-﻿using Open.Archetypes.BaseClasses;
+﻿using Open.Aids;
+using Open.Archetypes.BaseClasses;
 
 namespace Open.Archetypes.ProductClasses.Catalogue
 {
@@ -15,6 +16,16 @@ namespace Open.Archetypes.ProductClasses.Catalogue
         {
             get { return SetDefault(ref description); }
             set { SetValue(ref description, value); }
+        }
+
+        public static ProductType Random()
+        {
+            return new ProductType()
+            {
+                UniqueId = GetRandom.String(10, 15),
+                Name = GetRandom.String(10, 15),
+                Description = GetRandom.String(10, 15)
+            };
         }
     }
 }

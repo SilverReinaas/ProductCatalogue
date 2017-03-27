@@ -1,10 +1,11 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Open.Aids;
 using Open.Archetypes.ProductClasses.Catalogue;
 
 namespace Open.Tests.Archetypes.ProductClasses.Catalogue
 {
     [TestClass]
-    public class ProductTypeTests : ClassTests<ProductType>
+    public class ProductTypeTests : CommonTests<ProductType>
     {
         public ProductType p;
         [TestInitialize]
@@ -39,6 +40,10 @@ namespace Open.Tests.Archetypes.ProductClasses.Catalogue
             Assert.IsNotNull(p.Description);
             p.Description = "abc";
             Assert.AreEqual("abc", p.Description);
+        }
+        protected override ProductType GetRandomObj()
+        {
+            return ProductType.Random();
         }
     }
 }
