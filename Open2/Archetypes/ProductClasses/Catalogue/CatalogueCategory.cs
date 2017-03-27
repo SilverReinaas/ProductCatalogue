@@ -13,5 +13,14 @@ namespace Open.Archetypes.ProductClasses.Catalogue
             get { return SetDefault(ref name); }
             set { SetValue(ref name, value); }
         }
+
+        public static CatalogueCategory Random()
+        {
+            return new CatalogueCategory()
+            {
+                Name = GetRandom.String(10, 15),
+                UniqueId = GetRandom.String(10, 15)
+            };
+        }
     }
 }
