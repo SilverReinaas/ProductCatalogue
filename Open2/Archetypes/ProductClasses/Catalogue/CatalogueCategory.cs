@@ -1,4 +1,6 @@
-﻿using Open.Archetypes.BaseClasses;
+﻿using System;
+using Open.Aids;
+using Open.Archetypes.BaseClasses;
 
 namespace Open.Archetypes.ProductClasses.Catalogue
 {
@@ -11,6 +13,5 @@ namespace Open.Archetypes.ProductClasses.Catalogue
             get { return SetDefault(ref name); }
             set { SetValue(ref name, value); }
         }
-
     }
 }

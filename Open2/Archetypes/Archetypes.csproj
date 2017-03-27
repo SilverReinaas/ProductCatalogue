@@ -107,6 +107,7 @@
     <None Include="Archetypes.cd" />
     <None Include="Attribute.cd" />
     <None Include="BaseEntity.cd" />
+    <None Include="ProductClasses\Catalogue\ClassDiagram.cd" />
     <None Include="Entity.cd" />
     <None Include="Open.cd" />
     <None Include="Period.cd" />
