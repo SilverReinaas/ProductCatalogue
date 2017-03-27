@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Class Name="Open.Archetypes.ProductClasses.Catalogue.CatalogueCategory">
-    <Position X="2.25" Y="0.75" Width="1.5" />
+    <Position X="2.75" Y="0.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAEAAAAAAAAAAAAAAA=</HashCode>
       <FileName>ProductClasses\Catalogue\CatalogueCategory.cs</FileName>
@@ -32,31 +32,56 @@
     </TypeIdentifier>
   </Class>
   <Class Name="Open.Archetypes.BaseClasses.Archetype">
-    <Position X="14.25" Y="0.75" Width="1.5" />
+    <Position X="11.25" Y="3.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAIAQAAAgAAAAAAACAAAAAAAAAAQAAAAABAACA=</HashCode>
       <FileName>BaseClasses\Archetype.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Open.Archetypes.BaseClasses.Common">
-    <Position X="17.25" Y="0.75" Width="1.5" />
+    <Position X="13.25" Y="3.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AIAgIAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAABA=</HashCode>
       <FileName>BaseClasses\Common.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Open.Archetypes.BaseClasses.Serializable">
-    <Position X="20.25" Y="0.75" Width="1.5" />
+    <Position X="15.5" Y="3.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAEICAAAAAAAAA=</HashCode>
       <FileName>BaseClasses\Serializable.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Open.Archetypes.BaseClasses.Attribute">
-    <Position X="12.25" Y="3.25" Width="1.5" />
+    <Position X="9" Y="3.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAIAAIAAAAAAAAAAAAAAAIABEAAAABAAAAAAAA=</HashCode>
       <FileName>BaseClasses\Attribute.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Open.Archetypes.ProductClasses.Catalogue.CatalogueEntry">
+    <Position X="5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAAQAAAAAAAAABAAAAQAAAAEABAAAAAAAAAAAAA=</HashCode>
+      <FileName>ProductClasses\Catalogue\CatalogueEntry.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="ProductCategories" />
+      <Property Name="ProductTypes" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Open.Archetypes.ProductClasses.Catalogue.ProductCategory">
+    <Position X="7" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAEAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ProductClasses\Catalogue\ProductCategory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Open.Archetypes.ProductClasses.Catalogue.ProductType">
+    <Position X="2.25" Y="4.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAEAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ProductClasses\Catalogue\ProductType.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />
