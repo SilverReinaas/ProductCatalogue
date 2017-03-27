@@ -45,7 +45,7 @@ namespace Open.Tests.Archetypes.ProductClasses.Catalogue
         }
         protected override CatalogueEntry GetRandomObj()
         {
-            throw new NotImplementedException();
+            return CatalogueEntry.Random();
         }
     }
     }
