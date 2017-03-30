@@ -31,7 +31,9 @@ namespace Open.Archetypes.ProductClasses.Catalogue
             var result = new ProductCatalogue()
             {
                 Name = GetRandom.String(10,15),
-                UniqueId = GetRandom.String(10,15)
+                UniqueId = GetRandom.String(10,15),
+                CatalogueCategories = new Archetypes<CatalogueCategory>(),
+                CatalogueEntries = new Archetypes<CatalogueEntry>()
             };
 
             for (int i = 0; i < GetRandom.Int16(10,50); i++)
