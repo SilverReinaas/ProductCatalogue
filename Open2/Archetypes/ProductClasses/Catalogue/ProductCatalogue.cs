@@ -11,11 +11,9 @@ namespace Open.Archetypes.ProductClasses.Catalogue
             get { return SetDefault(ref name); }
             set { SetValue(ref name, value); }
         }
-
         public CatalogueEntries CatalogueEntries => CatalogueEntries.GetCatalogueEntries(UniqueId);
 
-        public CatalogueCategories CatalogueCategories
-            => CatalogueCategories.GetCatalogueCategories(UniqueId);
+        public CatalogueCategories CatalogueCategories => CatalogueCategories.GetCatalogueCategories(UniqueId);
         
         public static ProductCatalogue Random()
         {
