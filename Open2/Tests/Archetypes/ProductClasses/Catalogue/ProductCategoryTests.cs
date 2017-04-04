@@ -29,21 +29,19 @@ namespace Open.Tests.Archetypes.ProductClasses.Catalogue
 
         [TestMethod]
         public void NameTest()
-        {
+        {/*
             Assert.IsNotNull(myProductCategory.Name);
             myProductCategory.Name = null;
             Assert.IsNotNull(myProductCategory.Name);
             myProductCategory.Name = "abc";
-            Assert.AreEqual("abc", myProductCategory.Name);
+            Assert.AreEqual("abc", myProductCategory.Name);*/
+            Obj = new ProductCategory();
+            TestProperty(() => Obj.Name, x => Obj.Name = x);
         }
 
         protected override ProductCategory GetRandomObj()
         {
-            return new ProductCategory()
-            {
-                Name = GetRandom.String(10, 15),
-                UniqueId = GetRandom.String(10, 15)
-            };
+            return ProductCategory.Random();
         }
     }
 }
