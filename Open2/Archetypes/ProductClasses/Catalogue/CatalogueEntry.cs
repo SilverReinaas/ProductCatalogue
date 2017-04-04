@@ -7,12 +7,18 @@ namespace Open.Archetypes.ProductClasses.Catalogue
     public class CatalogueEntry : UniqueEntity
     {
         private string name;
+        private string description;
         private Archetypes<ProductType> productTypes;
         private Archetypes<ProductCategory> productCategories;
         public string Name
         {
             get { return SetDefault(ref name); }
             set { SetValue(ref name, value); }
+        }
+        public string Description
+        {
+            get { return SetDefault(ref description); }
+            set { SetValue(ref description, value); }
         }
         public Archetypes<ProductType> ProductTypes
         {
@@ -26,13 +32,10 @@ namespace Open.Archetypes.ProductClasses.Catalogue
         }
         public static CatalogueEntry Random()
         {
-            var result = new CatalogueEntry()
+            var result = new CatalogueEntry
             {
                 Name = GetRandom.String(10, 15),
                 UniqueId = GetRandom.String(10, 15),
-                Valid = Period.Random(),
-                ProductCategories = new Archetypes<ProductCategory>(),
-                ProductTypes = new Archetypes<ProductType>()
             };
             for (int i = 0; i < GetRandom.Int8(1, 5); i++)
             {
