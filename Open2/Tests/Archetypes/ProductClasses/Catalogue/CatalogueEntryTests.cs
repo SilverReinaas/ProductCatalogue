@@ -47,9 +47,18 @@ namespace Open.Tests.Archetypes.ProductClasses.Catalogue
             TestProperty(()=> Obj.Name, x => Obj.Name = x );
 
         }
+        [TestMethod]
+        public void DescriptionTest()
+        {
+            Assert.IsNotNull(MyCatalogueEntry.Description);
+            MyCatalogueEntry.Description = null;
+            Assert.IsNotNull(MyCatalogueEntry.Description);
+            MyCatalogueEntry.Description = "abc";
+            Assert.AreEqual("abc", MyCatalogueEntry.Description);
+        }
         protected override CatalogueEntry GetRandomObj()
         {
             return CatalogueEntry.Random();
         }
     }
-    }
+}
