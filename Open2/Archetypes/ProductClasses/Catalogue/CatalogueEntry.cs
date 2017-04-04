@@ -36,15 +36,12 @@ namespace Open.Archetypes.ProductClasses.Catalogue
             {
                 Name = GetRandom.String(10, 15),
                 UniqueId = GetRandom.String(10, 15),
-                Description = GetRandom.String(10, 15),
-                ProductTypes = new Archetypes<ProductType>(),
-                ProductCategories = new Archetypes<ProductCategory>()
             };
-            for (int i = 0; i < GetRandom.Int8(10, 50); i++)
+            for (int i = 0; i < GetRandom.Int8(1, 5); i++)
             {
                 result.ProductTypes.Add(ProductType.Random());
             }
-            for (int i = 0; i < GetRandom.Int8(10, 50); i++)
+            for (int i = 0; i < GetRandom.Int8(1, 5); i++)
             {
                 result.ProductCategories.Add(ProductCategory.Random());
             }

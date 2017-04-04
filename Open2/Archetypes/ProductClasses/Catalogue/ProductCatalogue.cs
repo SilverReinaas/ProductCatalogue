@@ -5,8 +5,6 @@ namespace Open.Archetypes.ProductClasses.Catalogue
 {
     public class ProductCatalogue : UniqueEntity
     {
-        private Archetypes<CatalogueEntry> catalogueEntries;
-        private Archetypes<CatalogueCategory> catalogueCategories;
         private string name;
         public string Name
         {
@@ -14,37 +12,18 @@ namespace Open.Archetypes.ProductClasses.Catalogue
             set { SetValue(ref name, value); }
         }
 
-        public Archetypes<CatalogueEntry> CatalogueEntries
-        {
-            get { return catalogueEntries ?? new Archetypes<CatalogueEntry>(); }
-            set { catalogueEntries = value; }
-        }
+        public CatalogueEntries CatalogueEntries => CatalogueEntries.GetCatalogueEntries(UniqueId);
 
-        public Archetypes<CatalogueCategory> CatalogueCategories
-        {
-            get { return catalogueCategories ?? new Archetypes<CatalogueCategory> (); }
-            set { catalogueCategories = value; }
-        }
-
+        public CatalogueCategories CatalogueCategories
+            => CatalogueCategories.GetCatalogueCategories(UniqueId);
+        
         public static ProductCatalogue Random()
         {
             var result = new ProductCatalogue()
             {
                 Name = GetRandom.String(10,15),
                 UniqueId = GetRandom.String(10,15),
-                CatalogueCategories = new Archetypes<CatalogueCategory>(),
-                CatalogueEntries = new Archetypes<CatalogueEntry>()
             };
-
-            for (int i = 0; i < GetRandom.Int16(10,50); i++)
-            {
-                result.CatalogueEntries.Add(CatalogueEntry.Random());
-            }
-
-            for (int i = 0; i < GetRandom.Int16(1, 5); i++)
-            {
-                result.CatalogueCategories.Add(CatalogueCategory.Random());
-            }
             return result;
         }
     }
