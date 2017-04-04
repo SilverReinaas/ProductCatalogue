@@ -8,7 +8,6 @@ namespace Open.Archetypes.ProductClasses.Catalogue
     {
         private string name;
         private string description;
-        private Archetypes<ProductType> productTypes;
         private Archetypes<ProductCategory> productCategories;
         public string CatalogueId
         {
@@ -25,11 +24,8 @@ namespace Open.Archetypes.ProductClasses.Catalogue
             get { return SetDefault(ref description); }
             set { SetValue(ref description, value); }
         }
-        public Archetypes<ProductType> ProductTypes
-        {
-            get { return productTypes ?? new Archetypes<ProductType>(); }
-            set { productTypes = value; }
-        }
+        public ProductTypes ProductTypes => Catalogue.ProductTypes.GetProductTypes(UniqueId);
+
         public Archetypes<ProductCategory> ProductCategories
         {
             get { return productCategories ?? new Archetypes<ProductCategory>(); }
