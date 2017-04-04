@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using Open.Archetypes.BaseClasses;
+﻿using Open.Archetypes.BaseClasses;
 using Open.Aids;
 
 namespace Open.Archetypes.ProductClasses.Catalogue
@@ -9,7 +8,6 @@ namespace Open.Archetypes.ProductClasses.Catalogue
         private string name;
         private string description;
         private string catalogueid;
-        private Archetypes<ProductCategory> productCategories;
         public string CatalogueId
         {
             get { return SetDefault(ref catalogueid); }
@@ -25,28 +23,16 @@ namespace Open.Archetypes.ProductClasses.Catalogue
             get { return SetDefault(ref description); }
             set { SetValue(ref description, value); }
         }
-        public ProductTypes ProductTypes => Catalogue.ProductTypes.GetProductTypes(UniqueId);
-
-        public Archetypes<ProductCategory> ProductCategories
-        {
-            get { return productCategories ?? new Archetypes<ProductCategory>(); }
-            set { productCategories = value; }
-        }
+        public ProductTypes ProductTypes => ProductTypes.GetProductTypes(UniqueId);
+        public ProductCategories ProductCategories => ProductCategories.GetProductCategories(UniqueId);
+        
         public static CatalogueEntry Random()
         {
             var result = new CatalogueEntry
             {
                 Name = GetRandom.String(10, 15),
                 UniqueId = GetRandom.String(10, 15),
-            };
-            for (int i = 0; i < GetRandom.Int8(1, 5); i++)
-            {
-                result.ProductTypes.Add(ProductType.Random());
-            }
-            for (int i = 0; i < GetRandom.Int8(1, 5); i++)
-            {
-                result.ProductCategories.Add(ProductCategory.Random());
-            }
+            }; 
             return result;
         }
     }
