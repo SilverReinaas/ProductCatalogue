@@ -16,7 +16,7 @@ namespace Open.Archetypes.ProductClasses.Catalogue
             get { return SetDefault(ref catalogueEntryId); }
             set { SetValue(ref catalogueEntryId, value); }
         }
-
+        public ProductInstances ProductInstances => ProductInstances.GetProductInstances(UniqueId);
         public static ProductType Random()
         {
             return new ProductType()

@@ -9,8 +9,7 @@ namespace Open.Archetypes.ProductClasses.Catalogue
     public class ProductInstances : BaseClasses.Archetypes<ProductInstace>
     {
         public static ProductInstances Instance { get; } = new ProductInstances();
-
-        public static ProductInstances GetCatalogueCategories(string productTypeId)
+        public static ProductInstances GetProductInstances(string productTypeId)
         {
             var e = new ProductInstances();
             var l = Instance.FindAll(x => x.ProductTypeId == productTypeId);
