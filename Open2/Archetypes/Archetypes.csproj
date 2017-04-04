@@ -69,6 +69,8 @@
     <Compile Include="ProductClasses\Catalogue\CatalogueEntries.cs" />
     <Compile Include="ProductClasses\Catalogue\CatalogueEntry.cs" />
     <Compile Include="ProductClasses\Catalogue\CatalogueCategories.cs" />
+    <Compile Include="ProductClasses\Catalogue\ProductInstace.cs" />
+    <Compile Include="ProductClasses\Catalogue\ProductInstances.cs" />
     <Compile Include="ProductClasses\Catalogue\ProductTypes.cs" />
     <Compile Include="ProductClasses\CompletedService.cs" />
     <Compile Include="ProductClasses\ExecutingService.cs" />
