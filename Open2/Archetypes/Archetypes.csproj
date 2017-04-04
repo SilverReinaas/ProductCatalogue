@@ -66,7 +66,9 @@
     <Compile Include="ProcessClasses\Process.cs" />
     <Compile Include="ProductClasses\CanceledService.cs" />
     <Compile Include="ProductClasses\Catalogue\CatalogueCategory.cs" />
+    <Compile Include="ProductClasses\Catalogue\CatalogueEntries.cs" />
     <Compile Include="ProductClasses\Catalogue\CatalogueEntry.cs" />
+    <Compile Include="ProductClasses\Catalogue\CatalogueCategories.cs" />
     <Compile Include="ProductClasses\CompletedService.cs" />
     <Compile Include="ProductClasses\ExecutingService.cs" />
     <Compile Include="ProductClasses\Product.cs" />
