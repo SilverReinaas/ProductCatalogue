@@ -9,23 +9,13 @@ namespace Open.Archetypes.ProductClasses.Catalogue
 {
     public class CatalogueEntries : BaseClasses.Archetypes<CatalogueEntry>
     {
-        public static CatalogueEntries Instance { get; } = Random();
+        public static CatalogueEntries Instance { get; } =  new CatalogueEntries();
         public static CatalogueEntries GetCatalogueEntries(string catalogueId)
         {
             var e = new CatalogueEntries();
             var l = Instance.FindAll(x => x.IsThisUniqueId(catalogueId));
             e.AddRange(l);
             return e;
-        }
-
-        public static CatalogueEntries Random()
-        {
-            CatalogueEntries result = new CatalogueEntries();
-            for (int i = 0; i < GetRandom.Int16(1,5); i++)
-            {
-                result.Add(CatalogueEntry.Random());
-            }
-            return result;
         }
     }
 }
