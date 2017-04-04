@@ -10,22 +10,12 @@ namespace Open.Archetypes.ProductClasses.Catalogue
     public class ProductTypes : BaseClasses.Archetypes<ProductType>
     {
         public static ProductTypes Instance { get; } = new ProductTypes();
-        public static ProductTypes GetProductTypes(string catalogueId)
+        public static ProductTypes GetProductTypes(string catalogueEntryId)
         {
             var e = new ProductTypes();
-            var l = Instance.FindAll(x => x.IsThisUniqueId(catalogueId));
+            var l = Instance.FindAll(x => x.CatalogueEntryId == catalogueEntryId);
             e.AddRange(l);
             return e;
-        }
-
-        public static ProductTypes Random()
-        {
-            ProductTypes result = new ProductTypes();
-            for (int i = 0; i < GetRandom.Int16(1, 5); i++)
-            {
-                result.Add(ProductType.Random());
-            }
-            return result;
         }
     }
 }
