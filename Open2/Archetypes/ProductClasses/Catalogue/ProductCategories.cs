@@ -3,16 +3,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Open.Aids;
 
 namespace Open.Archetypes.ProductClasses.Catalogue
 {
-    public class ProductTypes : BaseClasses.Archetypes<ProductType>
+    public class ProductCategories : BaseClasses.Archetypes<ProductCategory>
     {
-        public static ProductTypes Instance { get; } = new ProductTypes();
-        public static ProductTypes GetProductTypes(string catalogueEntryId)
+        public static ProductCategories Instance { get; } = new ProductCategories();
+
+        public static ProductCategories GetProductCategories(string catalogueEntryId)
         {
-            var e = new ProductTypes();
+            var e = new ProductCategories();
             var l = Instance.FindAll(x => x.CatalogueEntryId == catalogueEntryId);
             e.AddRange(l);
             return e;
