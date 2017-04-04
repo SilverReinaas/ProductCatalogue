@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Open.Archetypes.ProductClasses.Catalogue
+namespace Open.Archetypes.ProductClasses.Catalogue //TODO luua mitu mitmele seos kategooriate ja entryde vahel
 {
     public class ProductCategories : BaseClasses.Archetypes<ProductCategory>
     {
