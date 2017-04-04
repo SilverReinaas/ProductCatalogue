@@ -13,7 +13,7 @@ namespace Open.Archetypes.ProductClasses.Catalogue
         public static CatalogueCategories GetCatalogueCategories(string catalogueId)
         {
             var e = new CatalogueCategories();
-            var l = Instance.FindAll(x => x.IsThisUniqueId(catalogueId));
+            var l = Instance.FindAll(x => x.CatalogueId == catalogueId);
             e.AddRange(l);
             return e;
         }
