@@ -9,6 +9,11 @@ namespace Open.Archetypes.ProductClasses.Catalogue
         private string name;
         private string description;
         private Archetypes<ProductCategory> productCategories;
+        public string CatalogueId
+        {
+            get { return SetDefault(ref name); }
+            set { SetValue(ref name, value); }
+        }
         public string Name
         {
             get { return SetDefault(ref name); }
