@@ -21,7 +21,7 @@ namespace Open.Archetypes.ProductClasses.Catalogue
         public static CatalogueEntries Random()
         {
             CatalogueEntries result = new CatalogueEntries();
-            for (int i = 0; i < GetRandom.Int16(10,50); i++)
+            for (int i = 0; i < GetRandom.Int16(1,5); i++)
             {
                 result.Add(CatalogueEntry.Random());
             }
