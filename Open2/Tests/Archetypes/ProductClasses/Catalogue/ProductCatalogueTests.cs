@@ -41,7 +41,6 @@ namespace Open.Tests.Archetypes.ProductClasses.Catalogue
         [TestMethod]
         public void NameTest()
         {
-            MyProductCatalogue= new ProductCatalogue();
             TestProperty(() => MyProductCatalogue.Name, x => MyProductCatalogue.Name = x);
         }
 
