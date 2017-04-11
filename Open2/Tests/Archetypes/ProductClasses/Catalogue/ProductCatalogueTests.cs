@@ -41,11 +41,7 @@ namespace Open.Tests.Archetypes.ProductClasses.Catalogue
         [TestMethod]
         public void NameTest()
         {
-            Assert.IsNotNull(MyProductCatalogue.Name);
-            MyProductCatalogue.Name = null;
-            Assert.IsNotNull(MyProductCatalogue.Name);
-            MyProductCatalogue.Name = "Marion";
-            Assert.AreEqual("Marion", MyProductCatalogue.Name);
+            TestProperty(() => MyProductCatalogue.Name, x => MyProductCatalogue.Name = x);
         }
 
         protected override ProductCatalogue GetRandomObj()
