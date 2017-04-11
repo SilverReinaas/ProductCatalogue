@@ -14,7 +14,8 @@ namespace Soft.Controllers
         {
             var productCatalogue =
                 Open.Archetypes.ProductClasses.Catalogue.ProductCatalogue.Random();
-            var productCatalogueViewModel = new ProductCatalogueViewModel() {CatalogueName = productCatalogue.Name, CatalogueEntries = new List<CatalogueEntryViewModel>()};
+            var productCatalogueViewModel = new ProductCatalogueViewModel()
+            { CatalogueName = productCatalogue.Name, CatalogueEntries = new List<CatalogueEntryViewModel>()};
             foreach(var entry in productCatalogue.CatalogueEntries)
             {
                 productCatalogueViewModel.CatalogueEntries.Add(
