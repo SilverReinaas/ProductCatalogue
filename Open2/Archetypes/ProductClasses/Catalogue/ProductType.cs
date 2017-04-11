@@ -7,6 +7,7 @@ namespace Open.Archetypes.ProductClasses.Catalogue
     {
         private string name;
         private string catalogueEntryId;
+        private string description;
         public string Name
         {
             get { return SetDefault(ref name); }
@@ -15,6 +16,11 @@ namespace Open.Archetypes.ProductClasses.Catalogue
         public string CatalogueEntryId {
             get { return SetDefault(ref catalogueEntryId); }
             set { SetValue(ref catalogueEntryId, value); }
+        }
+        public string Description
+        {
+            get { return SetDefault(ref description); }
+            set { SetValue(ref description, value); }
         }
         public ProductInstances ProductInstances => ProductInstances.GetProductInstances(UniqueId);
         public static ProductType Random()

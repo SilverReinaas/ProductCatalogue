@@ -6,7 +6,6 @@ namespace Open.Archetypes.ProductClasses.Catalogue
     public class CatalogueEntry : UniqueEntity
     {
         private string name;
-        private string description;
         private string catalogueid;
         public string CatalogueId
         {
@@ -18,11 +17,7 @@ namespace Open.Archetypes.ProductClasses.Catalogue
             get { return SetDefault(ref name); }
             set { SetValue(ref name, value); }
         }
-        public string Description
-        {
-            get { return SetDefault(ref description); }
-            set { SetValue(ref description, value); }
-        }
+        
         public ProductTypes ProductTypes => ProductTypes.GetProductTypes(UniqueId);
         public ProductCategories ProductCategories => ProductCategories.GetProductCategories(UniqueId);
         
