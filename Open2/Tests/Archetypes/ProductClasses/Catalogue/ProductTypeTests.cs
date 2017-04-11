@@ -26,17 +26,12 @@ namespace Open.Tests.Archetypes.ProductClasses.Catalogue
         [TestMethod]
         public void NameTest()
         {
-            Obj = new ProductType();
-            TestProperty(() => Obj.Name, x => Obj.Name = x);
+            TestProperty(() => p.Name, x => p.Name = x);
         }
         [TestMethod]
         public void DescriptionTest()
         {
-            Assert.IsNotNull(p.Description);
-            p.Description = null;
-            Assert.IsNotNull(p.Description);
-            p.Description = "abc";
-            Assert.AreEqual("abc", p.Description);
+            TestProperty(() => p.Description, x => p.Description = x);
         }
         protected override ProductType GetRandomObj()
         {
