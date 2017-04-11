@@ -30,14 +30,12 @@ namespace Open.Tests.Archetypes.ProductClasses.Catalogue
         [TestMethod]
         public void NameTest()
         {
-            Obj = new ProductCategory();
-            TestProperty(() => Obj.Name, x => Obj.Name = x);
+            TestProperty(() => myProductCategory.Name, x => myProductCategory.Name = x);
         }
         [TestMethod]
-        public void CatalogueEntryId()
+        public void CatalogueEntryIdTest()
         {
-            Obj = new ProductCategory();
-            TestProperty(() => Obj.CatalogueEntryId, x => Obj.CatalogueEntryId = x);
+            TestProperty(() => myProductCategory.CatalogueEntryId, x => myProductCategory.CatalogueEntryId = x);
         }
 
         protected override ProductCategory GetRandomObj()
