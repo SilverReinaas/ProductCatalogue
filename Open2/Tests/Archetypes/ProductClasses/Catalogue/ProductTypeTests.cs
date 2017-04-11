@@ -38,6 +38,11 @@ namespace Open.Tests.Archetypes.ProductClasses.Catalogue
         {
             TestProperty(() => p.CatalogueEntryId, x => p.CatalogueEntryId = x);
         }
+        [TestMethod]
+        public void ProductInstancesTest()
+        {
+            Assert.IsNotNull(p.ProductInstances);
+        }
         protected override ProductType GetRandomObj()
         {
             return ProductType.Random();
