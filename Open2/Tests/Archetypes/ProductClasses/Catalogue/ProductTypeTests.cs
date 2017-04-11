@@ -26,11 +26,8 @@ namespace Open.Tests.Archetypes.ProductClasses.Catalogue
         [TestMethod]
         public void NameTest()
         {
-            Assert.IsNotNull(p.Name);
-            p.Name = null;
-            Assert.IsNotNull(p.Name);
-            p.Name = "abc";
-            Assert.AreEqual("abc", p.Name);
+            Obj = new ProductType();
+            TestProperty(() => Obj.Name, x => Obj.Name = x);
         }
         [TestMethod]
         public void DescriptionTest()
