@@ -17,7 +17,6 @@ namespace Open.Archetypes.ProductClasses.Catalogue
             e.AddRange(l);
             return e;
         }
-
         public static CatalogueEntries GenerateRandomInstance()
         {
             var result = new CatalogueEntries();;
