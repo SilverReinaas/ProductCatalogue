@@ -43,15 +43,7 @@ namespace Open.Tests.Archetypes.ProductClasses.Catalogue
             MyCatalogueEntry.Name = "Marion";
             Assert.AreEqual("Marion", MyCatalogueEntry.Name);
         }
-        [TestMethod]
-        public void DescriptionTest()
-        {
-            Assert.IsNotNull(MyCatalogueEntry.Description);
-            MyCatalogueEntry.Description = null;
-            Assert.IsNotNull(MyCatalogueEntry.Description);
-            MyCatalogueEntry.Description = "abc";
-            Assert.AreEqual("abc", MyCatalogueEntry.Description);
-        }
+       
         protected override CatalogueEntry GetRandomObj()
         {
             return CatalogueEntry.Random();

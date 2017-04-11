@@ -32,6 +32,15 @@ namespace Open.Tests.Archetypes.ProductClasses.Catalogue
             p.Name = "abc";
             Assert.AreEqual("abc", p.Name);
         }
+        [TestMethod]
+        public void DescriptionTest()
+        {
+            Assert.IsNotNull(p.Description);
+            p.Description = null;
+            Assert.IsNotNull(p.Description);
+            p.Description = "abc";
+            Assert.AreEqual("abc", p.Description);
+        }
         protected override ProductType GetRandomObj()
         {
             return ProductType.Random();
