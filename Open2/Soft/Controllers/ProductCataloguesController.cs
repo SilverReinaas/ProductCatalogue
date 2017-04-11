@@ -4,18 +4,24 @@ using System.Diagnostics;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using Open.Archetypes.ProductClasses.Catalogue;
 using Soft.Models;
 
 namespace Soft.Controllers
 {
     public class ProductCataloguesController : Controller
     {
+        private static bool isCreated;
+        private static ProductCatalogue productCatalogue;
         public ActionResult Index()
         {
-            var productCatalogue =
-                Open.Archetypes.ProductClasses.Catalogue.ProductCatalogue.Random();
-            var productCatalogueViewModel = new ProductCatalogueViewModel()
-            { CatalogueName = productCatalogue.Name, CatalogueEntries = new List<CatalogueEntryViewModel>()};
+            if (!isCreated)
+            {
+                CatalogueEntries.Instance.AddRange(CatalogueEntries.GenerateRandomInstance());
+                productCatalogue = Open.Archetypes.ProductClasses.Catalogue.ProductCatalogue.Random();
+            }
+            isCreated = true;
+            var productCatalogueViewModel = new ProductCatalogueViewModel() {CatalogueName = productCatalogue.Name, CatalogueEntries = new List<CatalogueEntryViewModel>()};
             foreach(var entry in productCatalogue.CatalogueEntries)
             {
                 productCatalogueViewModel.CatalogueEntries.Add(

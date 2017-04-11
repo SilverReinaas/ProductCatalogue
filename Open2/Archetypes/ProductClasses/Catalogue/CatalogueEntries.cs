@@ -9,7 +9,7 @@ namespace Open.Archetypes.ProductClasses.Catalogue
 {
     public class CatalogueEntries : BaseClasses.Archetypes<CatalogueEntry>
     {
-        public static CatalogueEntries Instance { get; } = GenerateRandomInstance();
+        public static CatalogueEntries Instance { get; } = new CatalogueEntries();
         public static CatalogueEntries GetCatalogueEntries(string catalogueId)
         {
             var e = new CatalogueEntries();
