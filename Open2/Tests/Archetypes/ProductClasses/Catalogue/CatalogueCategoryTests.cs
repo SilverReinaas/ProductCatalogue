@@ -27,7 +27,12 @@ namespace Open.Tests.Archetypes.ProductClasses.Catalogue
             TestProperty(() => MyCatalogueCategory.Name, x => MyCatalogueCategory.Name = x);
         }
 
-        
+        [TestMethod]
+        public void CatalogueIdTest()
+        {
+            TestProperty(() => MyCatalogueCategory.CatalogueId, x => MyCatalogueCategory.CatalogueId = x);
+        }
+
 
         protected override CatalogueCategory GetRandomObj()
         {
