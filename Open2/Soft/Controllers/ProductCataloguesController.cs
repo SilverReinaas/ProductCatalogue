@@ -6,6 +6,7 @@ using System.Web;
 using System.Web.Mvc;
 using Open.Archetypes.ProductClasses.Catalogue;
 using Soft.Models;
+using System.Net;
 
 namespace Soft.Controllers
 {
@@ -34,9 +35,9 @@ namespace Soft.Controllers
                     }
                     );
             }
-            return View("ProductCatalogues",productCatalogueViewModel);
+            return View("Index",productCatalogueViewModel);
         }
-        public ActionResult Create()
+        public ActionResult CreateEntry()
         {
             return null;
         }

@@ -1,5 +1,6 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Open.Aids;
+using Open.Archetypes.BaseClasses;
 using Open.Archetypes.ProductClasses.Catalogue;
 
 namespace Open.Tests.Archetypes.ProductClasses.Catalogue
@@ -7,11 +8,11 @@ namespace Open.Tests.Archetypes.ProductClasses.Catalogue
     [TestClass]
     public class ProductTypeTests : CommonTests<ProductType>
     {
-       
         [TestMethod]
         public void ConstructorTest()
         {
-            Assert.IsNotNull(Obj);
+            var p = new ProductType().GetType().BaseType;
+            Assert.AreEqual(p, typeof(BaseType<ProductType>));
         }
         [TestMethod]
         public void NameTest()
