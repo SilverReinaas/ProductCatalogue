@@ -55,7 +55,7 @@ namespace Open.Tests.Archetypes.RuleClasses
         public void ConvertTest()
         {
             var s = GetRandom.Decimal();
-            var s1 = Obj.Convert(s.ToString(UseCulture.Invariant));
+            var s1 = Obj.Convert(s.ToString(UseCulture.Current));
             Assert.AreEqual(s.ToString(UseCulture.Invariant),
                 s1.ToString(UseCulture.Invariant));
         }

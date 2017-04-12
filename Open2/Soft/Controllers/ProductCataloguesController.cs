@@ -18,7 +18,7 @@ namespace Soft.Controllers
             if (!isCreated)
             {
                 CatalogueEntries.Instance.AddRange(CatalogueEntries.GenerateRandomInstance());
-                productCatalogue = Open.Archetypes.ProductClasses.Catalogue.ProductCatalogue.Random();
+                productCatalogue = ProductCatalogue.Random();
             }
             isCreated = true;
             var productCatalogueViewModel = new ProductCatalogueViewModel() {CatalogueName = productCatalogue.Name, CatalogueEntries = new List<CatalogueEntryViewModel>()};

@@ -7,41 +7,31 @@ namespace Open.Tests.Archetypes.ProductClasses.Catalogue
     [TestClass]
     public class ProductTypeTests : CommonTests<ProductType>
     {
-        public ProductType p;
-        [TestInitialize]
-        public void InitializeTest()
-        {
-            p = new ProductType();
-        }
-        [TestCleanup]
-        public void CleanupTest()
-        {
-            p = null;
-        }
+       
         [TestMethod]
         public void ConstructorTest()
         {
-            Assert.IsNotNull(p);
+            Assert.IsNotNull(Obj);
         }
         [TestMethod]
         public void NameTest()
         {
-            TestProperty(() => p.Name, x => p.Name = x);
+            TestProperty(() => Obj.Name, x => Obj.Name = x);
         }
         [TestMethod]
         public void DescriptionTest()
         {
-            TestProperty(() => p.Description, x => p.Description = x);
+            TestProperty(() => Obj.Description, x => Obj.Description = x);
         }
         [TestMethod]
         public void CatalogueEntryIdTest()
         {
-            TestProperty(() => p.CatalogueEntryId, x => p.CatalogueEntryId = x);
+            TestProperty(() => Obj.CatalogueEntryId, x => Obj.CatalogueEntryId = x);
         }
         [TestMethod]
         public void ProductInstancesTest()
         {
-            Assert.IsNotNull(p.ProductInstances);
+            Assert.IsNotNull(Obj.ProductInstances);
         }
         protected override ProductType GetRandomObj()
         {

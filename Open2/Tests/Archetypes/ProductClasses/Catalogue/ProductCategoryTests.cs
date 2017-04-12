@@ -7,35 +7,22 @@ namespace Open.Tests.Archetypes.ProductClasses.Catalogue
     [TestClass]
     public class ProductCategoryTests : CommonTests<ProductCategory>
     {
-        private ProductCategory myProductCategory;
-
-        [TestInitialize]
-        public void Init()
-        {
-            myProductCategory = new ProductCategory();
-        }
-
-        [TestCleanup]
-        public void TestCleanUp()
-        {
-            myProductCategory = null;
-        }
-
+        
         [TestMethod]
         public void PeriodConstructorTest()
         {
-            Assert.IsNotNull(myProductCategory);
+            Assert.IsNotNull(Obj);
         }
 
         [TestMethod]
         public void NameTest()
         {
-            TestProperty(() => myProductCategory.Name, x => myProductCategory.Name = x);
+            TestProperty(() => Obj.Name, x => Obj.Name = x);
         }
         [TestMethod]
         public void CatalogueEntryIdTest()
         {
-            TestProperty(() => myProductCategory.CatalogueEntryId, x => myProductCategory.CatalogueEntryId = x);
+            TestProperty(() => Obj.CatalogueEntryId, x => Obj.CatalogueEntryId = x);
         }
 
         protected override ProductCategory GetRandomObj()

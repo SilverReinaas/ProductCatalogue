@@ -7,30 +7,22 @@ namespace Open.Tests.Archetypes.ProductClasses.Catalogue
     [TestClass]
     public class CatalogueCategoryTests : CommonTests<CatalogueCategory>
     {
-        public CatalogueCategory MyCatalogueCategory;
-
-        [TestInitialize]
-        public void Init()
-        {
-            MyCatalogueCategory = new CatalogueCategory();
-        }
-
         [TestMethod]
         public void ConstructorTest()
         {
-            Assert.IsNotNull(MyCatalogueCategory);
+            Assert.IsNotNull(Obj);
         }
 
         [TestMethod]
         public void NameTest()
         {
-            TestProperty(() => MyCatalogueCategory.Name, x => MyCatalogueCategory.Name = x);
+            TestProperty(() => Obj.Name, x => Obj.Name = x);
         }
 
         [TestMethod]
         public void CatalogueIdTest()
         {
-            TestProperty(() => MyCatalogueCategory.CatalogueId, x => MyCatalogueCategory.CatalogueId = x);
+            TestProperty(() => Obj.CatalogueId, x => Obj.CatalogueId = x);
         }
 
 
