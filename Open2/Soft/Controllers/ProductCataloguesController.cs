@@ -52,9 +52,12 @@ namespace Soft.Controllers
             return null;
         }
 
-        public ActionResult Delete()
+        public ActionResult Delete(string id)
         {
-            return null;
+            
+            CatalogueEntries.Instance.Remove(
+                CatalogueEntries.Instance.FirstOrDefault(x => x.UniqueId == id));
+            return RedirectToAction("Index");
         }
     }
 }
