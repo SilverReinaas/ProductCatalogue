@@ -24,10 +24,9 @@ namespace Open.Archetypes.ProductClasses.Catalogue
             }
             return result;
         }
-
         public static CatalogueEntry Find(string uniqueId)
         {
             return Instance.Find(x => x.IsThisUniqueId(uniqueId));
         }
     }
-}
+}   

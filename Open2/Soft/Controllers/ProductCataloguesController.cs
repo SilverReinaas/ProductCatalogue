@@ -7,6 +7,7 @@ using System.Web.Mvc;
 using Open.Archetypes.ProductClasses.Catalogue;
 using Soft.Models;
 using System.Net;
+using Open.Logic.CatalogueClasses;
 
 namespace Soft.Controllers
 {
@@ -44,11 +45,15 @@ namespace Soft.Controllers
             
         }
 
-        public ActionResult Edit()
+        public ActionResult Edit(
+            [Bind(Include = "UniqueID, Name, ValidFrom, ValidTo")] EntryEditModel e)
         {
-            return null;
+            if (!ModelState.IsValid) return View("Edit", e);
+            var adr = CatalogueEntries.Instance.Find(x => x.IsThisUniqueId(e.UniqueId));
+            if (adr == null) return HttpNotFound();
+            return RedirectToAction("Index");
         }
-
+    }
         public ActionResult Details()
         {
             return null;
