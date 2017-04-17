@@ -37,9 +37,11 @@ namespace Soft.Controllers
             }
             return View("Index",productCatalogueViewModel);
         }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
         public ActionResult CreateEntry()
         {
-            return null;
+            
         }
 
         public ActionResult Edit()
