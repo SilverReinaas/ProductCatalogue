@@ -1,5 +1,5 @@
-﻿@using Open.Archetypes.ProductClasses
-@model Open.Archetypes.ProductClasses.Catalogue.CatalogueEntry
+﻿
+@model Open.Logic.CatalogueClasses.EntryEditModel
 @{ ViewBag.Title = "Details"; }
 <div>
     <h2>Details</h2>
@@ -9,10 +9,10 @@
         <dd> @Html.DisplayFor(model => model.UniqueId) </dd>
         <dt> @Html.DisplayNameFor(model => model.Name) </dt>
         <dd> @Html.DisplayFor(model => model.Name) </dd>
-        <dt> @Html.DisplayNameFor(model => model.Valid.From) </dt>
-        <dd> @Html.DisplayFor(model => model.Valid.From) </dd>
-        <dt> @Html.DisplayNameFor(model => model.Valid.To) </dt>
-        <dd> @Html.DisplayFor(model => model.Valid.To) </dd>
+        <dt> @Html.DisplayNameFor(model => model.ValidFrom) </dt>
+        <dd> @Html.DisplayFor(model => model.ValidFrom) </dd>
+        <dt> @Html.DisplayNameFor(model => model.ValidTo) </dt>
+        <dd> @Html.DisplayFor(model => model.ValidTo) </dd>
     </dl>
 </div>
 <p>

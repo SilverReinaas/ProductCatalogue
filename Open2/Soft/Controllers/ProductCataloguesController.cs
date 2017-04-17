@@ -64,8 +64,8 @@ namespace Soft.Controllers
         public ActionResult Details(string id)
         {
             
-            var catalogue = CatalogueEntries.Instance.Find(x => x.IsThisUniqueId(id));
-         
+            var catalogue = new EntryEditModel(CatalogueEntries.Instance.Find(x => x.IsThisUniqueId(id)));
+
             return View("Details",catalogue);
         }
 
