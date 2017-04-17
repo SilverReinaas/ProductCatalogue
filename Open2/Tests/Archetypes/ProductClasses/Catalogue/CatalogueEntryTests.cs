@@ -28,7 +28,6 @@ namespace Open.Tests.Archetypes.ProductClasses.Catalogue
         {
             Assert.IsNotNull(MyCatalogueEntry.ProductTypes);
         }
-
         [TestMethod]
         public void ProductCategoriesTest()
         {
@@ -39,8 +38,7 @@ namespace Open.Tests.Archetypes.ProductClasses.Catalogue
         {
             Obj = new CatalogueEntry();
             TestProperty(() => Obj.Name, x => Obj.Name = x);
-        }
-       
+        }       
         protected override CatalogueEntry GetRandomObj()
         {
             return CatalogueEntry.Random();
