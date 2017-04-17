@@ -17,5 +17,9 @@ namespace Open.Archetypes.ProductClasses.Catalogue //TODO: luua mitu mitmele seo
             e.AddRange(l);
             return e;
         }
+        public static ProductCategory Find(string uniqueId)
+        {
+            return Instance.Find(x => x.IsThisUniqueId(uniqueId));
+        }
     }
 }
