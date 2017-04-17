@@ -30,7 +30,6 @@ namespace Open.Archetypes.ProductClasses.Catalogue
             }; 
             return result;
         }
-
         public override CatalogueEntry Type => CatalogueEntries.Find(TypeId);
     }
 }

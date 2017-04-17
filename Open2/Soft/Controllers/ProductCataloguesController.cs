@@ -51,11 +51,15 @@ namespace Soft.Controllers
             return RedirectToAction("Index");
         }
 
-        public ActionResult Edit()
+        public ActionResult Edit(
+            [Bind(Include = "UniqueID, Name, ValidFrom, ValidTo")] EntryEditModel e)
         {
-            return null;
+            if (!ModelState.IsValid) return View("Edit", e);
+            var adr = CatalogueEntries.Instance.Find(x => x.IsThisUniqueId(e.UniqueId));
+            if (adr == null) return HttpNotFound();
+            return RedirectToAction("Index");
         }
-
+    }
         public ActionResult Details()
         {
             return null;
