@@ -1,5 +1,6 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Open.Archetypes.BaseClasses;
 using Open.Archetypes.ProductClasses.Catalogue;
 namespace Open.Tests.Archetypes.ProductClasses.Catalogue
 {
@@ -10,9 +11,9 @@ namespace Open.Tests.Archetypes.ProductClasses.Catalogue
         [TestMethod]
         public void ConstructorTest()
         {
-            Assert.IsNotNull(Obj);
+            var p = new CatalogueEntry().GetType().BaseType;
+            Assert.AreEqual(p, typeof(BaseEntity<CatalogueEntry>));
         }
-
         [TestMethod]
         public void ProductTypesTest()
         {

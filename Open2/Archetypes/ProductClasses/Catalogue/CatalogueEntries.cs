@@ -1,4 +1,5 @@
-﻿using Open.Aids;
+﻿using System;
+using Open.Aids;
 
 namespace Open.Archetypes.ProductClasses.Catalogue
 {
@@ -22,6 +23,11 @@ namespace Open.Archetypes.ProductClasses.Catalogue
                 result.Add(rand);
             }
             return result;
+        }
+
+        public static CatalogueEntry Find(string uniqueId)
+        {
+            return Instance.Find(x => x.IsThisUniqueId(uniqueId));
         }
     }
 }
