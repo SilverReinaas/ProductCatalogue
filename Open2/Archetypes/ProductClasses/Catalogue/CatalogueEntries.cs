@@ -16,7 +16,7 @@ namespace Open.Archetypes.ProductClasses.Catalogue
         public static CatalogueEntries GenerateRandomInstance()
         {
             var result = new CatalogueEntries();;
-            for (int i = 0; i < GetRandom.Int16(10, 30); i++)
+            for (int i = 0; i < GetRandom.Int32(20, 30); i++)
             {
                 var rand = CatalogueEntry.Random();
                 rand.CatalogueId = "abc123";

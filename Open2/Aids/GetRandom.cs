@@ -70,7 +70,7 @@ namespace Open.Aids {
         public static string String(int min = 10, int max = 20) {
             var b = new StringBuilder();
             var size = Int32(min, max);
-            for (var i = 0; i < size; i++) b.Append(Char('A', 'z'));
+            for (var i = 0; i < size; i++) b.Append(Char('a', 'z'));
             return b.ToString();
         }
         public static IEnumerable<string> Strings() {

@@ -25,8 +25,8 @@ namespace Open.Archetypes.ProductClasses.Catalogue
         {
             var result = new CatalogueEntry
             {
-                Name = GetRandom.String(10, 15),
-                UniqueId = GetRandom.String(10, 15),
+                Name = GetRandom.String(),
+                UniqueId = GetRandom.String(),
             }; 
             return result;
         }

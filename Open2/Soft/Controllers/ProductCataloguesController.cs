@@ -56,13 +56,10 @@ namespace Soft.Controllers
             return View("CreateEntry", e);
         }
 
-        public ActionResult Edit(
-            [Bind(Include = "UniqueID, Name, ValidFrom, ValidTo")] EntryEditModel e)
+        public ActionResult Edit(string id)
         {
-            if (!ModelState.IsValid) return View("Edit", e);
-            var adr = CatalogueEntries.Instance.Find(x => x.IsThisUniqueId(e.UniqueId));
-            if (adr == null) return HttpNotFound();
-            return RedirectToAction("Index");
+            var adr = new EntryEditModel(CatalogueEntries.Instance.Find(x => x.IsThisUniqueId(id)));
+            return View("Edit", adr);
         }
         public ActionResult Details(string id)
         {
@@ -72,9 +69,12 @@ namespace Soft.Controllers
             return View("Details",catalogue);
         }
 
-        public ActionResult Delete()
+        public ActionResult Delete(string id)
         {
-            return null;
+            
+            CatalogueEntries.Instance.Remove(
+                CatalogueEntries.Instance.FirstOrDefault(x => x.UniqueId == id));
+            return RedirectToAction("Index");
         }
     }
 }
