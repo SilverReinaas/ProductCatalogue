@@ -1,5 +1,6 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Open.Aids;
+using Open.Archetypes.BaseClasses;
 using Open.Archetypes.ProductClasses.Catalogue;
 
 namespace Open.Tests.Archetypes.ProductClasses.Catalogue
@@ -11,7 +12,8 @@ namespace Open.Tests.Archetypes.ProductClasses.Catalogue
         [TestMethod]
         public void PeriodConstructorTest()
         {
-            Assert.IsNotNull(Obj);
+            var p = new ProductCategory().GetType().BaseType;
+            Assert.AreEqual(p, typeof(BaseType<ProductCategory>));
         }
 
         [TestMethod]

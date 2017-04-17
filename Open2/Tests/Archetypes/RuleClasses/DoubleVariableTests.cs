@@ -40,7 +40,7 @@ namespace Open.Tests.Archetypes.RuleClasses {
         }
         [TestMethod] public void ConvertTest() {
             var s = GetRandom.Double();
-            var s1 = Obj.Convert(s.ToString(UseCulture.Invariant));
+            var s1 = Obj.Convert(s.ToString(UseCulture.Current));
             Assert.AreEqual(s.ToString(UseCulture.Invariant), s1.ToString(UseCulture.Invariant));
         }
         [TestMethod] public void ValueTest() {

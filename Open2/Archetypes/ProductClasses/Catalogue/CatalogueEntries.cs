@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Open.Aids;
 
 namespace Open.Archetypes.ProductClasses.Catalogue
@@ -28,5 +24,9 @@ namespace Open.Archetypes.ProductClasses.Catalogue
             }
             return result;
         }
+        public static CatalogueEntry Find(string uniqueId)
+        {
+            return Instance.Find(x => x.IsThisUniqueId(uniqueId));
+        }
     }
-}
+}   

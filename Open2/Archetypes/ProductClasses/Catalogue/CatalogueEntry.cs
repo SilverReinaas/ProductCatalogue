@@ -3,7 +3,7 @@ using Open.Aids;
 
 namespace Open.Archetypes.ProductClasses.Catalogue
 {
-    public class CatalogueEntry : UniqueEntity
+    public class CatalogueEntry : BaseEntity<CatalogueEntry>
     {
         private string name;
         private string catalogueid;
@@ -30,5 +30,6 @@ namespace Open.Archetypes.ProductClasses.Catalogue
             }; 
             return result;
         }
+        public override CatalogueEntry Type => CatalogueEntries.Find(TypeId);
     }
 }

@@ -40,7 +40,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CatalogueClasses\EntryEditViewModel.cs" />
+    <Compile Include="CatalogueClasses\EntryEditModel.cs" />
     <Compile Include="Dummy.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
