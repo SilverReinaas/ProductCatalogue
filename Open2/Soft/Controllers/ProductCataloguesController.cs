@@ -50,6 +50,11 @@ namespace Soft.Controllers
             CatalogueEntries.Instance.Add(cat);
             return RedirectToAction("Index");
         }
+        public ActionResult CreateEntry()
+        {
+            var e = new EntryEditModel();
+            return View("CreateEntry", e);
+        }
 
         public ActionResult Edit(
             [Bind(Include = "UniqueID, Name, ValidFrom, ValidTo")] EntryEditModel e)
@@ -59,7 +64,6 @@ namespace Soft.Controllers
             if (adr == null) return HttpNotFound();
             return RedirectToAction("Index");
         }
-    }
         public ActionResult Details()
         {
             return null;
