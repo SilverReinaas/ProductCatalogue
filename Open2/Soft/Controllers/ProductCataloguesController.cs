@@ -7,6 +7,7 @@ using System.Web.Mvc;
 using Open.Archetypes.ProductClasses.Catalogue;
 using Soft.Models;
 using System.Net;
+using Open.Logic.CatalogueClasses;
 
 namespace Soft.Controllers
 {
@@ -39,9 +40,15 @@ namespace Soft.Controllers
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult CreateEntry()
+        public ActionResult CreateEntry([Bind(
+            Include =
+                "UniqueId,Name,ValidFrom, ValidTo"
+        )] EntryEditModel p)
         {
-            
+            if (!ModelState.IsValid) return View("CreateEntry", p);
+            var cat = new CatalogueEntry();
+            CatalogueEntries.Instance.Add(cat);
+            return RedirectToAction("Index");
         }
 
         public ActionResult Edit()
