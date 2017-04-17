@@ -4,8 +4,9 @@ using Open.Archetypes.BaseClasses;
 namespace Open.Tests {
     public class PropertyTests : Serializable {
         protected void TestProperty(Func<string> get, Action<string> set) {
-            Assert.AreEqual(string.Empty, get());
+            
             var s = Open.Aids.GetRandom.String();
+            Assert.AreNotEqual(s, get());
             set(s);
             Assert.AreEqual(s, get());
             set(null);

@@ -3,7 +3,7 @@ using Open.Archetypes.BaseClasses;
 
 namespace Open.Archetypes.ProductClasses.Catalogue
 {
-    public class ProductType : UniqueEntity
+    public class ProductType : BaseType<ProductType>
     {
         private string name;
         private string catalogueEntryId;
@@ -31,5 +31,7 @@ namespace Open.Archetypes.ProductClasses.Catalogue
                 Name = GetRandom.String(10, 15)
             };
         }
+
+        public override ProductType Type => ProductTypes.Find(TypeId);
     }
 }

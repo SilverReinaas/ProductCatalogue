@@ -10,6 +10,7 @@ namespace Open.Archetypes.ProductClasses.Catalogue
     public class ProductTypes : BaseClasses.Archetypes<ProductType>
     {
         public static ProductTypes Instance { get; } = new ProductTypes();
+        public static ProductType Find(string uniqueId) { return Instance.Find(x => x.IsThisUniqueId(uniqueId)); }
         public static ProductTypes GetProductTypes(string catalogueEntryId)
         {
             var e = new ProductTypes();

@@ -93,6 +93,7 @@
     <Compile Include="Archetypes\PartyClasses\PartyTests.cs" />
     <Compile Include="Archetypes\ProcessClasses\ProcessTests.cs" />
     <Compile Include="Archetypes\ProductClasses\Catalogue\CatalogueCategoryTests.cs" />
+    <Compile Include="Archetypes\ProductClasses\Catalogue\CatalogueEntriesTests.cs" />
     <Compile Include="Archetypes\ProductClasses\Catalogue\CatalogueEntryTests.cs" />
     <Compile Include="Archetypes\ProductClasses\Catalogue\ProductCatalogueTests.cs" />
     <Compile Include="Archetypes\ProductClasses\Catalogue\ProductCategoryTests.cs" />
