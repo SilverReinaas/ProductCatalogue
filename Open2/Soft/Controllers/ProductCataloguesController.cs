@@ -64,9 +64,12 @@ namespace Soft.Controllers
             if (adr == null) return HttpNotFound();
             return RedirectToAction("Index");
         }
-        public ActionResult Details()
+        public ActionResult Details(string id)
         {
-            return null;
+            
+            var catalogue = CatalogueEntries.Instance.Find(x => x.IsThisUniqueId(id));
+         
+            return View("Details",catalogue);
         }
 
         public ActionResult Delete()

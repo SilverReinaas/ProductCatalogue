@@ -1,7 +1,22 @@
-﻿
-@{
-    ViewBag.Title = "Details";
-}
-
-<h2>Details</h2>
+﻿@using Open.Archetypes.ProductClasses
+@model Open.Archetypes.ProductClasses.Catalogue.CatalogueEntry
+@{ ViewBag.Title = "Details"; }
+<div>
+    <h2>Details</h2>
+    <dl class="dl-horizontal">
+        
+        <dt> @Html.DisplayNameFor(model => model.UniqueId) </dt>
+        <dd> @Html.DisplayFor(model => model.UniqueId) </dd>
+        <dt> @Html.DisplayNameFor(model => model.Name) </dt>
+        <dd> @Html.DisplayFor(model => model.Name) </dd>
+        <dt> @Html.DisplayNameFor(model => model.Valid.From) </dt>
+        <dd> @Html.DisplayFor(model => model.Valid.From) </dd>
+        <dt> @Html.DisplayNameFor(model => model.Valid.To) </dt>
+        <dd> @Html.DisplayFor(model => model.Valid.To) </dd>
+    </dl>
+</div>
+<p>
+   
+    @Html.ActionLink("Back to List", "Index")
+</p>
 
