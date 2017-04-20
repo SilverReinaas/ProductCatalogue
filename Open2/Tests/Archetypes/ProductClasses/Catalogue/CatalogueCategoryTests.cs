@@ -19,13 +19,6 @@ namespace Open.Tests.Archetypes.ProductClasses.Catalogue
             TestProperty(() => Obj.Name, x => Obj.Name = x);
         }
 
-        [TestMethod]
-        public void CatalogueIdTest()
-        {
-            TestProperty(() => Obj.CatalogueId, x => Obj.CatalogueId = x);
-        }
-
-
         protected override CatalogueCategory GetRandomObj()
         {
             return new CatalogueCategory()
