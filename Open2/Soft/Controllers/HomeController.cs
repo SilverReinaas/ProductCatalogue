@@ -4,7 +4,6 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using Open.Archetypes;
-using Soft.Models;
 
 namespace Soft.Controllers
 {
