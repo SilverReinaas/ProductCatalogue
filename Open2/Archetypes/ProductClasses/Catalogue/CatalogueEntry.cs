@@ -9,7 +9,6 @@ namespace Open.Archetypes.ProductClasses.Catalogue
         
         private string name;
         private string catalogueid;
-        [Key]
         public string CatalogueId
         {
             get { return SetDefault(ref catalogueid); }

@@ -19,12 +19,11 @@ namespace Soft.Controllers
         {
             if (!isCreated)
             {
-                CatalogueEntries.Instance.AddRange(CatalogueEntries.GenerateRandomInstance());
                 productCatalogue = ProductCatalogue.Random();
             }
             isCreated = true;
-            var productCatalogueViewModel = new ProductCatalogueViewModel() {CatalogueName = productCatalogue.Name, CatalogueEntries = new List<CatalogueEntryViewModel>()};
-            foreach(var entry in productCatalogue.CatalogueEntries)
+            var productCatalogueViewModel = new ProductCatalogueViewModel() { CatalogueName = productCatalogue.Name, CatalogueEntries = new List<CatalogueEntryViewModel>() };
+            foreach (var entry in productCatalogue.CatalogueEntries)
             {
                 productCatalogueViewModel.CatalogueEntries.Add(
                     new CatalogueEntryViewModel()
@@ -36,6 +35,7 @@ namespace Soft.Controllers
                     }
                     );
             }
+
             return View("Index",productCatalogueViewModel);
         }
         [HttpPost]

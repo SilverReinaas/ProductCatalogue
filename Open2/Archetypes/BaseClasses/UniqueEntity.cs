@@ -1,8 +1,11 @@
 ﻿
 using Open.Aids;
+using System.ComponentModel.DataAnnotations;
+
 namespace Open.Archetypes.BaseClasses {
     public abstract class UniqueEntity : AttributedEntity {
         private string uniqueId;
+        [Key]
         public string UniqueId {
             get { return SetDefault(ref uniqueId); }
             set { SetValue(ref uniqueId, value); }
