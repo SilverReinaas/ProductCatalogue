@@ -67,10 +67,12 @@
     <Compile Include="PartyClasses\Party.cs" />
     <Compile Include="ProcessClasses\Process.cs" />
     <Compile Include="ProductClasses\CanceledService.cs" />
+    <Compile Include="ProductClasses\Catalogue\CatalogueByCategory.cs" />
     <Compile Include="ProductClasses\Catalogue\CatalogueCategory.cs" />
     <Compile Include="ProductClasses\Catalogue\CatalogueEntries.cs" />
     <Compile Include="ProductClasses\Catalogue\CatalogueEntry.cs" />
     <Compile Include="ProductClasses\Catalogue\CatalogueCategories.cs" />
+    <Compile Include="ProductClasses\Catalogue\CataloguesByCategory.cs" />
     <Compile Include="ProductClasses\Catalogue\ProductCatalogues.cs" />
     <Compile Include="ProductClasses\Catalogue\ProductCategories.cs" />
     <Compile Include="ProductClasses\Catalogue\ProductInstace.cs" />

@@ -13,7 +13,7 @@ namespace Open.Archetypes.ProductClasses.Catalogue
         }
         public CatalogueEntries CatalogueEntries => CatalogueEntries.GetCatalogueEntries(UniqueId);
 
-        public CatalogueCategories CatalogueCategories => CatalogueCategories.GetCatalogueCategories(UniqueId);
+        public CatalogueCategories CatalogueCategories => CataloguesByCategory.GetCategoriesByCatalogue(UniqueId);
         
         public static ProductCatalogue Random()
         {

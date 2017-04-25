@@ -53,5 +53,12 @@
       <FileName>ProductClasses\Catalogue\ProductInstace.cs</FileName>
     </TypeIdentifier>
   </Class>
+  <Class Name="Open.Archetypes.ProductClasses.Catalogue.CatalogueCategory">
+    <Position X="8" Y="4" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAEBAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ProductClasses\Catalogue\CatalogueCategory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
   <Font Name="Segoe UI" Size="9" />
 </ClassDiagram>
