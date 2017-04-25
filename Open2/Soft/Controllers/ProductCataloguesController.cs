@@ -5,7 +5,6 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using Open.Archetypes.ProductClasses.Catalogue;
-using Soft.Models;
 using System.Net;
 using Open.Logic.CatalogueClasses;
 
@@ -22,17 +21,11 @@ namespace Soft.Controllers
                 productCatalogue = ProductCatalogue.Random();
             }
             isCreated = true;
-            var productCatalogueViewModel = new ProductCatalogueViewModel() { CatalogueName = productCatalogue.Name, CatalogueEntries = new List<CatalogueEntryViewModel>() };
-            foreach (var entry in productCatalogue.CatalogueEntries)
+            var productCatalogueViewModel = new ProductCatalogueViewModel() {CatalogueName = productCatalogue.Name, CatalogueEntries = new List<EntryEditModel>()};
+            foreach(var entry in productCatalogue.CatalogueEntries)
             {
                 productCatalogueViewModel.CatalogueEntries.Add(
-                    new CatalogueEntryViewModel()
-                    {
-                        Name = entry.Name,
-                        UniqueId = entry.UniqueId,
-                        ValidFrom = entry.Valid.From.ToString(),
-                        ValidTo = entry.Valid.To.ToString()
-                    }
+                    new EntryEditModel(entry)
                     );
             }
 
@@ -63,10 +56,14 @@ namespace Soft.Controllers
         }
         public ActionResult Details(string id)
         {
-            
-            var catalogue = new EntryEditModel(CatalogueEntries.Instance.Find(x => x.IsThisUniqueId(id)));
+            var entry = CatalogueEntries.Instance.Find(x => x.IsThisUniqueId(id));
+            var entryModel = new EntryEditModel(entry);
+            foreach (var type in entry.ProductTypes)
+            {
+                entryModel.ProductTypes.Add(new ProductTypeModel(type));
+            }
 
-            return View("Details",catalogue);
+            return View("Details", entryModel);
         }
 
         public ActionResult Delete(string id)

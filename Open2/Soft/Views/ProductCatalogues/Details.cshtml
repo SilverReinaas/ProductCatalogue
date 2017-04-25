@@ -4,7 +4,7 @@
 <div>
     <h2>Details</h2>
     <dl class="dl-horizontal">
-        
+
         <dt> @Html.DisplayNameFor(model => model.UniqueId) </dt>
         <dd> @Html.DisplayFor(model => model.UniqueId) </dd>
         <dt> @Html.DisplayNameFor(model => model.Name) </dt>
@@ -14,9 +14,49 @@
         <dt> @Html.DisplayNameFor(model => model.ValidTo) </dt>
         <dd> @Html.DisplayFor(model => model.ValidTo) </dd>
     </dl>
+
+    <table class="table">
+        <tr>
+            <th>
+                UniqueID
+            </th>
+            <th>
+                Name
+            </th>
+            <th>
+                Valid from
+            </th>
+            <th>
+                Valid to
+            </th>
+            <th></th>
+        </tr>
+        @foreach (var item in Model.ProductTypes)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.UniqueId)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ValidFrom)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ValidTo)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.UniqueId }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.UniqueId }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.UniqueId })
+                </td>
+            </tr>
+        }
+    </table>
 </div>
 <p>
-   
+
     @Html.ActionLink("Back to List", "Index")
 </p>
 
