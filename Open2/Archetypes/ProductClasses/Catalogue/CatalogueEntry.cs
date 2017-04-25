@@ -1,12 +1,15 @@
 ﻿using Open.Archetypes.BaseClasses;
 using Open.Aids;
+using System.ComponentModel.DataAnnotations;
 
 namespace Open.Archetypes.ProductClasses.Catalogue
 {
     public class CatalogueEntry : BaseEntity<CatalogueEntry>
     {
+        
         private string name;
         private string catalogueid;
+        [Key]
         public string CatalogueId
         {
             get { return SetDefault(ref catalogueid); }
