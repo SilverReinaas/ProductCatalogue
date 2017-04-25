@@ -4,6 +4,8 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using Open.Archetypes;
+using Open.Data.CatalogueData;
+using Open.Archetypes.ProductClasses.Catalogue;
 
 namespace Soft.Controllers
 {

@@ -3,7 +3,7 @@
   <Class Name="Open.Archetypes.ProductClasses.Catalogue.CatalogueCategory">
     <Position X="7.25" Y="4" Width="2" />
     <TypeIdentifier>
-      <HashCode>AAAABAAAAAAAAAAAAAAAAAQAAAAEBAAAAAAAAEAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAEBAAAAAAAAAAAAAA=</HashCode>
       <FileName>ProductClasses\Catalogue\CatalogueCategory.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -25,8 +25,8 @@
       <FileName>ProductClasses\Catalogue\ProductCatalogue.cs</FileName>
     </TypeIdentifier>
     <ShowAsCollectionAssociation>
-      <Property Name="CatalogueEntries" />
       <Property Name="CatalogueCategories" />
+      <Property Name="CatalogueEntries" />
     </ShowAsCollectionAssociation>
   </Class>
   <Class Name="Open.Archetypes.ProductClasses.Catalogue.ProductType">
@@ -51,13 +51,6 @@
     <TypeIdentifier>
       <HashCode>AAAAAAAAAQAgAAAAIAAAAAQAAAAEBAEAAAAAAAAAAAA=</HashCode>
       <FileName>ProductClasses\Catalogue\ProductInstace.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="Open.Archetypes.ProductClasses.Catalogue.CatalogueCategory">
-    <Position X="8" Y="4" Width="1.75" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAEBAAAAAAAAAAAAAA=</HashCode>
-      <FileName>ProductClasses\Catalogue\CatalogueCategory.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />

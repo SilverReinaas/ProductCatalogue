@@ -5,6 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using Open.Aids;
 using Open.Archetypes.BaseClasses;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Open.Archetypes.ProductClasses.Catalogue
 {
@@ -13,6 +15,7 @@ namespace Open.Archetypes.ProductClasses.Catalogue
         private string name;
         private string description;
         private string productTypeId;
+        [Key, Column(Order = 4)]
         public string ProductTypeId
         {
             get { return SetDefault(ref productTypeId); }

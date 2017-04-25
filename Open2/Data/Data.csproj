@@ -50,6 +50,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CatalogueData\CatalogueDAL.cs" />
+    <Compile Include="CatalogueData\EntryBusinessLayer.cs" />
     <Compile Include="Dummy.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

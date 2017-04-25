@@ -9,7 +9,7 @@ using Open.Archetypes.ProductClasses.Catalogue;
 namespace Open.Tests.Archetypes.ProductClasses.Catalogue
 {
     [TestClass]
-    public class CatalogueEntriesTests: CommonTests<CatalogueEntries>
+    public class CatalogueEntriesTests//: CommonTests<CatalogueEntries>
     {
         [TestMethod]
         public void InstanceTest()
@@ -28,6 +28,6 @@ namespace Open.Tests.Archetypes.ProductClasses.Catalogue
         {
 
         }
-        protected override CatalogueEntries GetRandomObj() { return CatalogueEntries.GenerateRandomInstance(); }
+        //protected override CatalogueEntries GetRandomObj() { return CatalogueEntries.GenerateRandomInstance(); }
     }
 }

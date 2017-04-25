@@ -1,6 +1,8 @@
 ﻿using Open.Archetypes.BaseClasses;
 using Open.Aids;
 using System.ComponentModel.DataAnnotations;
+using Open.Archetypes.OrderClasses;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Open.Archetypes.ProductClasses.Catalogue
 {
@@ -9,6 +11,7 @@ namespace Open.Archetypes.ProductClasses.Catalogue
         
         private string name;
         private string catalogueid;
+        [Key, Column(Order = 0)]
         public string CatalogueId
         {
             get { return SetDefault(ref catalogueid); }
