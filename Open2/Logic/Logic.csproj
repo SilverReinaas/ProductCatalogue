@@ -41,6 +41,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CatalogueClasses\EntryEditModel.cs" />
+    <Compile Include="CatalogueClasses\ProductCatalogueViewModel.cs" />
+    <Compile Include="CatalogueClasses\ProductTypeModel.cs" />
     <Compile Include="Dummy.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
