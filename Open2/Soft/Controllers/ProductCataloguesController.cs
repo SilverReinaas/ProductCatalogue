@@ -48,8 +48,9 @@ namespace Soft.Controllers
                 Valid = new Period() { From = p.ValidFrom, To = p.ValidTo}
                 
             };
+            CatalogueEntries.Instance.Add(entry);
             var ebl = new EntryBusinessLayer();
-            ebl.SaveEntry(entry);
+            ebl.UploadEntries(CatalogueEntries.Instance.ToList());
             return RedirectToAction("Index");
         }
 
@@ -60,16 +61,9 @@ namespace Soft.Controllers
             if (!ModelState.IsValid) return View("CreateEntry", p);
             var adr = CatalogueEntries.Instance.Find(x => x.IsThisUniqueId(p.UniqueId));
             if (adr == null) return HttpNotFound();
-            var entry = new CatalogueEntry()
-            {
-               UniqueId = adr.UniqueId,
-               Name = adr.Name,
-               CatalogueId = productCatalogue.UniqueId,
-               Valid = adr.Valid,
-
-            };
-            CatalogueEntries.Instance.Remove(adr);
-            CatalogueEntries.Instance.Add(entry);
+            adr.Name = p.Name;
+            adr.Valid.From = p.ValidFrom;
+            adr.Valid.To = p.ValidTo;
             return RedirectToAction("Index");
         }
         public ActionResult CreateEntry()
