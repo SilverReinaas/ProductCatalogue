@@ -1,4 +1,5 @@
 ﻿using System;
+using Open.Archetypes.BaseClasses;
 using Open.Archetypes.ProductClasses.Catalogue;
 
 namespace Open.Logic.CatalogueClasses
@@ -18,5 +19,5 @@ namespace Open.Logic.CatalogueClasses
         public DateTime ValidFrom { get; set; }
         public DateTime ValidTo { get; set; }
 
-    }
+        }
 }

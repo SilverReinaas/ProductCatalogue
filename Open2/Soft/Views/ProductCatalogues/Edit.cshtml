@@ -3,7 +3,9 @@
     ViewBag.Title = "Edit";
 }
 @using (Html.BeginForm("Edit", "ProductCatalogues", new { ID = Model.UniqueId }, FormMethod.Post))
-{   <div class="form-horizontal">  </div>
+{   
+    @Html.AntiForgeryToken()
+    <div class="form-horizontal">  </div>
         <h4>Edit</h4>
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })

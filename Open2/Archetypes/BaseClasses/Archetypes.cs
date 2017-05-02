@@ -22,8 +22,11 @@ namespace Open.Archetypes.BaseClasses {
             if (!IsNull(x1) && !IsNull(y1)) return x1.IsSameContent(y1);
             return x.Equals(y);
         }
-        public virtual void Add(T item) {
-            Safe.Run(() => {
+
+        public virtual void Add(T item)
+        {
+            Safe.Run(() =>
+            {
                 if (IsReadOnly) return;
                 if (IsSet && !IsNull(Find(x => IsThis(x, item)))) return;
                 list.Add(item);
@@ -31,6 +34,7 @@ namespace Open.Archetypes.BaseClasses {
                 DoOnChanged(item);
             });
         }
+
         public void AddRange(IEnumerable<T> a) { AddRange(a.ToList()); }
         public virtual void AddRange(IList<T> a) {
             Safe.Run(() => {

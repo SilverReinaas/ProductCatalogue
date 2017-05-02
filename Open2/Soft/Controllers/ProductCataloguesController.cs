@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlTypes;
 using System.Diagnostics;
 using System.Linq;
 using System.Web;
@@ -7,6 +8,8 @@ using System.Web.Mvc;
 using Open.Archetypes.ProductClasses.Catalogue;
 using Soft.Models;
 using System.Net;
+using Open.Aids;
+using Open.Archetypes.BaseClasses;
 using Open.Logic.CatalogueClasses;
 
 namespace Soft.Controllers
@@ -40,14 +43,38 @@ namespace Soft.Controllers
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult CreateEntry([Bind(
-            Include =
-                "UniqueId,Name,ValidFrom, ValidTo"
-        )] EntryEditModel p)
+        public ActionResult CreateEntry([Bind(Include ="UniqueId,Name,ValidFrom, ValidTo")] EntryEditModel p)
         {
             if (!ModelState.IsValid) return View("CreateEntry", p);
-            var cat = new CatalogueEntry();
-            CatalogueEntries.Instance.Add(cat);
+            var entry = new CatalogueEntry()
+            {
+                UniqueId = GetRandom.String(),
+                Name = p.Name,
+                CatalogueId = productCatalogue.UniqueId,
+                Valid = new Period() { From = p.ValidFrom, To = p.ValidTo}
+                
+            };
+            CatalogueEntries.Instance.Add(entry);
+            return RedirectToAction("Index");
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Edit([Bind(Include = "UniqueId,Name,ValidFrom, ValidTo")] EntryEditModel p)
+        {
+            if (!ModelState.IsValid) return View("CreateEntry", p);
+            var adr = CatalogueEntries.Instance.Find(x => x.IsThisUniqueId(p.UniqueId));
+            if (adr == null) return HttpNotFound();
+            var entry = new CatalogueEntry()
+            {
+               UniqueId = adr.UniqueId,
+               Name = adr.Name,
+               CatalogueId = productCatalogue.UniqueId,
+               Valid = adr.Valid,
+
+            };
+            CatalogueEntries.Instance.Remove(adr);
+            CatalogueEntries.Instance.Add(entry);
             return RedirectToAction("Index");
         }
         public ActionResult CreateEntry()
@@ -76,5 +103,6 @@ namespace Soft.Controllers
                 CatalogueEntries.Instance.FirstOrDefault(x => x.UniqueId == id));
             return RedirectToAction("Index");
         }
+
     }
-}
+    }
