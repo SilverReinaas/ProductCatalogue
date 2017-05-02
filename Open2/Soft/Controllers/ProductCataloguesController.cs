@@ -64,8 +64,7 @@ namespace Soft.Controllers
                Name = adr.Name,
                CatalogueId = productCatalogue.UniqueId,
                Valid = adr.Valid,
-
-            };
+               };
             CatalogueEntries.Instance.Remove(adr);
             CatalogueEntries.Instance.Add(entry);
             return RedirectToAction("Index");
@@ -75,7 +74,6 @@ namespace Soft.Controllers
             var e = new EntryEditModel();
             return View("CreateEntry", e);
         }
-
         public ActionResult Edit(string id)
         {
             var adr = new EntryEditModel(CatalogueEntries.Instance.Find(x => x.IsThisUniqueId(id)));
