@@ -9,6 +9,7 @@ using Open.Archetypes.ProductClasses.Catalogue;
 using System.Net;
 using Open.Aids;
 using Open.Archetypes.BaseClasses;
+using Open.Data.CatalogueData;
 using Open.Logic.CatalogueClasses;
 
 namespace Soft.Controllers
@@ -48,6 +49,8 @@ namespace Soft.Controllers
                 
             };
             CatalogueEntries.Instance.Add(entry);
+            var ebl = new EntryBusinessLayer();
+            ebl.UploadEntries(CatalogueEntries.Instance.ToList());
             return RedirectToAction("Index");
         }
 
@@ -58,15 +61,9 @@ namespace Soft.Controllers
             if (!ModelState.IsValid) return View("CreateEntry", p);
             var adr = CatalogueEntries.Instance.Find(x => x.IsThisUniqueId(p.UniqueId));
             if (adr == null) return HttpNotFound();
-            var entry = new CatalogueEntry()
-            {
-               UniqueId = adr.UniqueId,
-               Name = adr.Name,
-               CatalogueId = productCatalogue.UniqueId,
-               Valid = adr.Valid,
-               };
-            CatalogueEntries.Instance.Remove(adr);
-            CatalogueEntries.Instance.Add(entry);
+            adr.Name = p.Name;
+            adr.Valid.From = p.ValidFrom;
+            adr.Valid.To = p.ValidTo;
             return RedirectToAction("Index");
         }
         public ActionResult CreateEntry()
@@ -74,6 +71,7 @@ namespace Soft.Controllers
             var e = new EntryEditModel();
             return View("CreateEntry", e);
         }
+
         public ActionResult Edit(string id)
         {
             var adr = new EntryEditModel(CatalogueEntries.Instance.Find(x => x.IsThisUniqueId(id)));
