@@ -9,6 +9,7 @@ using Open.Archetypes.ProductClasses.Catalogue;
 using System.Net;
 using Open.Aids;
 using Open.Archetypes.BaseClasses;
+using Open.Data.CatalogueData;
 using Open.Logic.CatalogueClasses;
 
 namespace Soft.Controllers
@@ -47,7 +48,8 @@ namespace Soft.Controllers
                 Valid = new Period() { From = p.ValidFrom, To = p.ValidTo}
                 
             };
-            CatalogueEntries.Instance.Add(entry);
+            var ebl = new EntryBusinessLayer();
+            ebl.SaveEntry(entry);
             return RedirectToAction("Index");
         }
 
