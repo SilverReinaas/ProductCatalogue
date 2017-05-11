@@ -11,10 +11,16 @@ namespace Soft.Controllers
 {
     public class HomeController : Controller
     {
+        private static bool isCreated;
         public ActionResult Index()
         {
-            var entryBusinessLayer = new EntryBusinessLayer();
-            CatalogueEntries.Instance.AddRange(entryBusinessLayer.GetEntries());
+            if (!isCreated)
+            {
+                var entryBusinessLayer = new EntryBusinessLayer();
+                CatalogueEntries.Instance.AddRange(entryBusinessLayer.GetEntries());
+                ProductTypes.Instance.AddRange(entryBusinessLayer.GetTypes());
+            }
+            isCreated = true;
             return View();
         }
 

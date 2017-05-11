@@ -18,5 +18,10 @@ namespace Open.Archetypes.ProductClasses.Catalogue
             e.AddRange(l);
             return e;
         }
+
+        public static void Remove(string id)
+        {
+            Instance.Remove(Find(id));
+        }
     }
 }

@@ -2,7 +2,7 @@
 @{
     ViewBag.Title = "Edit";
 }
-@using (Html.BeginForm("Edit", "ProductCatalogues", new { ID = Model.UniqueId }, FormMethod.Post))
+@using (Html.BeginForm("SaveEntry", "ProductCatalogues", new { ID = Model.UniqueId }, FormMethod.Post))
 {   
     @Html.AntiForgeryToken()
     <div class="form-horizontal">  </div>

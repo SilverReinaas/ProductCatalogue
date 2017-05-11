@@ -16,5 +16,6 @@ namespace Open.Data.CatalogueData
             base.OnModelCreating(modelBuilder);
         }
         public DbSet<CatalogueEntry> CatalogueEntries { get; set; }
+        public DbSet<ProductType> ProductTypes { get; set; }
     }
 }

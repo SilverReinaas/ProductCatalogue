@@ -16,9 +16,6 @@
 <table class="table">
     <tr>
         <th>
-            UniqueID
-        </th>
-        <th>
             Name
         </th>
         <th>
@@ -34,9 +31,6 @@
     {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.UniqueId)
-            </td>
-            <td>
                 @Html.DisplayFor(modelItem => item.Name)
             </td>
             <td>
@@ -46,9 +40,9 @@
                 @Html.DisplayFor(modelItem => item.ValidTo)
             </td>
             <td>
-                @Html.ActionLink("Edit", "Edit", new {id =item.UniqueId}) |
-                @Html.ActionLink("Details", "Details", new {id=item.UniqueId}) |
-                @Html.ActionLink("Delete", "Delete", new { id=item.UniqueId })
+                @Html.ActionLink("Edit", "EntryEdit", new {id =item.UniqueId}) |
+                @Html.ActionLink("Details", "EntryDetails", new {id=item.UniqueId}) |
+                @Html.ActionLink("Delete", "EntryDelete", new { id=item.UniqueId })
             </td>
         </tr>
     }

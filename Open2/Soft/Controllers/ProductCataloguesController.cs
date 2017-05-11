@@ -49,13 +49,14 @@ namespace Soft.Controllers
                 
             };
             var ebl = new EntryBusinessLayer();
-            ebl.SaveEntry(entry);
+            CatalogueEntries.Instance.Add(entry);
+            ebl.UploadEntries(CatalogueEntries.Instance.ToList());
             return RedirectToAction("Index");
         }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "UniqueId,Name,ValidFrom, ValidTo")] EntryEditModel p)
+        public ActionResult SaveEntry([Bind(Include = "UniqueId,Name,ValidFrom, ValidTo")] EntryEditModel p)
         {
             if (!ModelState.IsValid) return View("CreateEntry", p);
             var adr = CatalogueEntries.Instance.Find(x => x.IsThisUniqueId(p.UniqueId));
@@ -64,7 +65,7 @@ namespace Soft.Controllers
             adr.Valid.From = p.ValidFrom;
             adr.Valid.To = p.ValidTo;
             var ebl = new EntryBusinessLayer();
-            ebl.SaveEntry(adr);
+            ebl.UploadEntries(CatalogueEntries.Instance.ToList());
             return RedirectToAction("Index");
         }
         public ActionResult CreateEntry()
@@ -73,29 +74,67 @@ namespace Soft.Controllers
             return View("CreateEntry", e);
         }
 
-        public ActionResult Edit(string id)
+        public ActionResult EntryEdit(string id)
         {
             var adr = new EntryEditModel(CatalogueEntries.Instance.Find(x => x.IsThisUniqueId(id)));
-            return View("Edit", adr);
+            return View("EntryEdit", adr);
         }
-        public ActionResult Details(string id)
+        public ActionResult EntryDetails(string id)
         {
             var entry = CatalogueEntries.Instance.Find(x => x.IsThisUniqueId(id));
             var entryModel = new EntryEditModel(entry);
-            foreach (var type in entry.ProductTypes)
-            {
-                entryModel.ProductTypes.Add(new ProductTypeModel(type));
-            }
-
-            return View("Details", entryModel);
+            return View("EntryDetails", entryModel);
         }
 
-        public ActionResult Delete(string id)
+        public ActionResult EntryDelete(string id)
         {
-            
-            CatalogueEntries.Instance.Remove(
-                CatalogueEntries.Instance.FirstOrDefault(x => x.UniqueId == id));
+            var ebl = new EntryBusinessLayer();
+            ebl.RemoveEntry(id);
             return RedirectToAction("Index");
+        }
+
+        public ActionResult TypeDelete(string id)
+        {
+            var ebl = new EntryBusinessLayer();
+            var removeType = ProductTypes.Instance.Find(x => x.IsThisUniqueId(id));
+            ebl.RemoveType(id);
+            var entry =
+                CatalogueEntries.Instance.Find(x => x.IsThisUniqueId(removeType.CatalogueEntryId));
+            ebl.UploadTypes(ProductTypes.Instance.ToList());
+            var entryModel = new EntryEditModel(entry);
+            return View("EntryDetails", entryModel);
+        }
+
+        public ActionResult CreateType(string id)
+        {
+            var e = new ProductTypeModel()
+            {
+                CatalogueEntryId = id,
+                ValidFrom = DateTime.Now,
+                ValidTo = DateTime.Now.AddYears(1)
+            };
+            return View("CreateType", e);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult CreateType(
+            [Bind(Include = "UniqueId,Name,Description,ValidFrom,ValidTo,CatalogueEntryId")] ProductTypeModel p)
+        {
+            if (!ModelState.IsValid) return View("CreateType", p);
+            var type = new ProductType()
+            {
+                UniqueId = Guid.NewGuid().ToString(),
+                Name = p.Name,
+                Description = p.Description,
+                CatalogueEntryId = p.CatalogueEntryId,
+                Valid = new Period() {From = p.ValidFrom, To = p.ValidTo}
+
+            };
+            var ebl = new EntryBusinessLayer();
+            ProductTypes.Instance.Add(type);
+            ebl.UploadTypes(ProductTypes.Instance.ToList());
+            return EntryDetails(type.CatalogueEntryId);
         }
 
     }

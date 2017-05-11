@@ -5,8 +5,6 @@
     <h2>Details</h2>
     <dl class="dl-horizontal">
 
-        <dt> @Html.DisplayNameFor(model => model.UniqueId) </dt>
-        <dd> @Html.DisplayFor(model => model.UniqueId) </dd>
         <dt> @Html.DisplayNameFor(model => model.Name) </dt>
         <dd> @Html.DisplayFor(model => model.Name) </dd>
         <dt> @Html.DisplayNameFor(model => model.ValidFrom) </dt>
@@ -14,14 +12,17 @@
         <dt> @Html.DisplayNameFor(model => model.ValidTo) </dt>
         <dd> @Html.DisplayFor(model => model.ValidTo) </dd>
     </dl>
-
+    <p>
+        Create New
+        @Html.ActionLink("Type", "CreateType",new {id = Model.UniqueId},null)
+    </p>
     <table class="table">
         <tr>
             <th>
-                UniqueID
+                Name
             </th>
             <th>
-                Name
+                Desctiption
             </th>
             <th>
                 Valid from
@@ -35,10 +36,10 @@
         {
             <tr>
                 <td>
-                    @Html.DisplayFor(modelItem => item.UniqueId)
+                    @Html.DisplayFor(modelItem => item.Name)
                 </td>
                 <td>
-                    @Html.DisplayFor(modelItem => item.Name)
+                    @Html.DisplayFor(modelItem => item.Description)
                 </td>
                 <td>
                     @Html.DisplayFor(modelItem => item.ValidFrom)
@@ -47,9 +48,9 @@
                     @Html.DisplayFor(modelItem => item.ValidTo)
                 </td>
                 <td>
-                    @Html.ActionLink("Edit", "Edit", new { id = item.UniqueId }) |
-                    @Html.ActionLink("Details", "Details", new { id = item.UniqueId }) |
-                    @Html.ActionLink("Delete", "Delete", new { id = item.UniqueId })
+                    @Html.ActionLink("Edit", "TypeEdit", new { id = item.UniqueId }) |
+                    @Html.ActionLink("Details", "TypeDetails", new { id = item.UniqueId }) |
+                    @Html.ActionLink("Delete", "TypeDelete", new { id = item.UniqueId })
                 </td>
             </tr>
         }

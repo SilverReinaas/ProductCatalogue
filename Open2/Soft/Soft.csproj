@@ -203,9 +203,10 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\ProductCatalogues\Index.cshtml" />
     <Content Include="Views\ProductCatalogues\CreateEntry.cshtml" />
-    <Content Include="Views\ProductCatalogues\Edit.cshtml" />
+    <Content Include="Views\ProductCatalogues\EntryEdit.cshtml" />
     <Content Include="Views\ProductCatalogues\Delete.cshtml" />
-    <Content Include="Views\ProductCatalogues\Details.cshtml" />
+    <Content Include="Views\ProductCatalogues\EntryDetails.cshtml" />
+    <Content Include="Views\ProductCatalogues\CreateType.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

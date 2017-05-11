@@ -15,6 +15,11 @@ namespace Open.Logic.CatalogueClasses
             ValidFrom = a.Valid.From;
             ValidTo = a.Valid.To;
             ProductTypes = new List<ProductTypeModel>();
+
+            foreach (var type in a.ProductTypes)
+            {
+                ProductTypes.Add(new ProductTypeModel(type));
+            }
         }
         public string UniqueId { get; set; }
         public string Name { get; set; }

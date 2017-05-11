@@ -19,7 +19,7 @@ namespace Open.Archetypes.ProductClasses.Catalogue
         {
             var result = new ProductCatalogue()
             {
-                Name = GetRandom.String(10,15),
+                Name = "Menüü",
                 UniqueId =  "abc123",//GetRandom.String(10,15),
             };
             return result;

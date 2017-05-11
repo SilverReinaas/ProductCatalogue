@@ -28,5 +28,10 @@ namespace Open.Archetypes.ProductClasses.Catalogue
         {
             return Instance.Find(x => x.IsThisUniqueId(uniqueId));
         }
+
+        public static void Remove(string id)
+        {
+            Instance.Remove(Find(id));
+        }
     }
 }   
