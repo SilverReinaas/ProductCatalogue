@@ -79,6 +79,7 @@ namespace Soft.Controllers
             var adr = new EntryEditModel(CatalogueEntries.Instance.Find(x => x.IsThisUniqueId(id)));
             return View("EntryEdit", adr);
         }
+
         public ActionResult EntryDetails(string id)
         {
             var entry = CatalogueEntries.Instance.Find(x => x.IsThisUniqueId(id));
@@ -114,6 +115,28 @@ namespace Soft.Controllers
                 ValidTo = DateTime.Now.AddYears(1)
             };
             return View("CreateType", e);
+        }
+
+        public ActionResult TypeEdit(string id)
+        {
+            var adr = new ProductTypeModel(ProductTypes.Instance.Find(x => x.IsThisUniqueId(id)));
+            return View("TypeEditView", adr);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult SaveType([Bind(Include = "UniqueId, Name, Description, ValidFrom, ValidTo")] ProductTypeModel p)
+        {
+            if (!ModelState.IsValid) return View("CreateType", p);
+            var type = ProductTypes.Instance.Find(x => x.IsThisUniqueId(p.UniqueId));
+            if (type == null) return HttpNotFound();
+            type.Name = p.Name;
+            type.Description = p.Description;
+            type.Valid.From = p.ValidFrom;
+            type.Valid.To = p.ValidTo;
+            var ebl = new EntryBusinessLayer();
+            ebl.UploadTypes(ProductTypes.Instance.ToList());
+            return EntryDetails(type.CatalogueEntryId);
         }
 
         [HttpPost]
