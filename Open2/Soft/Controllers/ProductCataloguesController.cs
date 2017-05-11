@@ -42,15 +42,14 @@ namespace Soft.Controllers
             if (!ModelState.IsValid) return View("CreateEntry", p);
             var entry = new CatalogueEntry()
             {
-                UniqueId = GetRandom.String(),
+                UniqueId = Guid.NewGuid().ToString(),
                 Name = p.Name,
                 CatalogueId = productCatalogue.UniqueId,
                 Valid = new Period() { From = p.ValidFrom, To = p.ValidTo}
                 
             };
-            CatalogueEntries.Instance.Add(entry);
             var ebl = new EntryBusinessLayer();
-            ebl.UploadEntries(CatalogueEntries.Instance.ToList());
+            ebl.SaveEntry(entry);
             return RedirectToAction("Index");
         }
 
@@ -64,11 +63,13 @@ namespace Soft.Controllers
             adr.Name = p.Name;
             adr.Valid.From = p.ValidFrom;
             adr.Valid.To = p.ValidTo;
+            var ebl = new EntryBusinessLayer();
+            ebl.SaveEntry(adr);
             return RedirectToAction("Index");
         }
         public ActionResult CreateEntry()
         {
-            var e = new EntryEditModel();
+            var e = new EntryEditModel() {ValidFrom = DateTime.Now, ValidTo = DateTime.Now.AddYears(1)};
             return View("CreateEntry", e);
         }
 

@@ -9,6 +9,7 @@ namespace Open.Logic.CatalogueClasses
         public EntryEditModel() { }
         public EntryEditModel(CatalogueEntry a)
         {
+            if (a == null) return;
             UniqueId = a.UniqueId;
             Name = a.Name;
             ValidFrom = a.Valid.From;

@@ -1,5 +1,6 @@
 ﻿using Open.Archetypes.ProductClasses.Catalogue;
 using System.Collections.Generic;
+using System.Data.Entity.Migrations;
 using System.Linq;
 
 namespace Open.Data.CatalogueData
@@ -14,7 +15,7 @@ namespace Open.Data.CatalogueData
         public CatalogueEntry SaveEntry(CatalogueEntry c)
         {
             CatalogueDAL catDal = new CatalogueDAL();
-            catDal.CatalogueEntries.Add(c);
+            catDal.CatalogueEntries.AddOrUpdate(c);
             catDal.SaveChanges();
             return c;
         }
