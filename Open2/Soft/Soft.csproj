@@ -207,6 +207,7 @@
     <Content Include="Views\ProductCatalogues\Delete.cshtml" />
     <Content Include="Views\ProductCatalogues\EntryDetails.cshtml" />
     <Content Include="Views\ProductCatalogues\CreateType.cshtml" />
+    <Content Include="Views\ProductCatalogues\TypeEditView.cshtml" />
     <Content Include="Views\ProductCatalogues\TypeDetails.cshtml" />
   </ItemGroup>
   <ItemGroup>
