@@ -1,0 +1,22 @@
+﻿@model Open.Logic.CatalogueClasses.ProductTypeModel
+@{ ViewBag.Title = "Details"; }
+<div>
+    <h2>Details</h2>
+    <dl class="dl-horizontal">
+
+        <dt> @Html.DisplayNameFor(model => model.Name) </dt>
+        <dd> @Html.DisplayFor(model => model.Name) </dd>
+        <dt> @Html.DisplayNameFor(model => model.Description) </dt>
+        <dd> @Html.DisplayFor(model => model.Description) </dd>
+        <dt> @Html.DisplayNameFor(model => model.ValidFrom) </dt>
+        <dd> @Html.DisplayFor(model => model.ValidFrom) </dd>
+        <dt> @Html.DisplayNameFor(model => model.ValidTo) </dt>
+        <dd> @Html.DisplayFor(model => model.ValidTo) </dd>
+    </dl>
+</div>
+<p>
+
+    @Html.ActionLink("Back to List", "EntryDetails", new {id=Model.CatalogueEntryId})
+</p>
+
+

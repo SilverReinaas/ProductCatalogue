@@ -25,6 +25,6 @@ namespace Open.Logic.CatalogueClasses
         public string Description { get; set; }
         public DateTime ValidFrom { get; set; }
         public DateTime ValidTo { get; set; }
-        public string CatalogueEntryId { get; set; }
+        public string CatalogueEntryId { get; set; }        
     }
 }

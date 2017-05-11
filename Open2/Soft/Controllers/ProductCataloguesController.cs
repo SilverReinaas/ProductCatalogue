@@ -85,6 +85,12 @@ namespace Soft.Controllers
             var entryModel = new EntryEditModel(entry);
             return View("EntryDetails", entryModel);
         }
+        public ActionResult TypeDetails(string id)
+        {
+            var type = ProductTypes.Instance.Find(x => x.IsThisUniqueId(id));
+            var typeModel = new ProductTypeModel(type);
+            return View("TypeDetails", typeModel);
+        }
 
         public ActionResult EntryDelete(string id)
         {
