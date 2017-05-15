@@ -6,7 +6,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace Open.Archetypes.BaseClasses {
     public abstract class UniqueEntity : AttributedEntity {
         private string uniqueId;
-        //[Key, Column(Order = 2)]
+        [Key, Column(Order = 2)]
         public string UniqueId {
             get { return SetDefault(ref uniqueId); }
             set { SetValue(ref uniqueId, value); }

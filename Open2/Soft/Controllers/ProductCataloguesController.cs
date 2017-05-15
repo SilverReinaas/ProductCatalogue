@@ -49,8 +49,9 @@ namespace Soft.Controllers
                 
             };
             var ebl = new EntryBusinessLayer();
+            ebl.SaveEntry(entry);
             CatalogueEntries.Instance.Add(entry);
-            ebl.UploadEntries(CatalogueEntries.Instance.ToList());
+            //ebl.UploadEntries(CatalogueEntries.Instance.ToList());
             return RedirectToAction("Index");
         }
 
